@@ -57,8 +57,8 @@ export const AppWrapper = styled.div`
 
 export const SmokeElement = styled(motion.img)`
   bottom: -12rem;
-  left: -16rem;
   height: 64rem;
+  left: -16rem;
   mix-blend-mode: lighten;
   opacity: 0.25;
   position: absolute;
