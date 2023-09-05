@@ -30,7 +30,7 @@ export const Overall = createGlobalStyle`
       position: fixed;
       top: 0;
       width: 100%;
-      z-index: calc(infinity);
+      z-index: 20;
     }
   }
 `;
