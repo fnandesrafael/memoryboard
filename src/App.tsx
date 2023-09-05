@@ -1,5 +1,6 @@
 import React from 'react';
 import smoke from '@assets/gifs/smoke.gif';
+import Importer from '@components/Importer';
 
 import * as S from './global.styles';
 
@@ -13,6 +14,8 @@ function App() {
         src={smoke}
         alt=""
       />
+
+      <Importer />
     </S.AppWrapper>
   );
 }

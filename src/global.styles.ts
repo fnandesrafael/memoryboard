@@ -30,7 +30,7 @@ export const Overall = createGlobalStyle`
       position: fixed;
       top: 0;
       width: 100%;
-      z-index: 10;
+      z-index: calc(infinity);
     }
   }
 `;
@@ -51,7 +51,7 @@ export const AppWrapper = styled.div`
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 0;
   }
 `;
 
