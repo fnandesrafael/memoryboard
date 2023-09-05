@@ -16,12 +16,6 @@ export const Button = styled(motion.button)`
   width: 4rem;
   z-index: 10;
 
-  &:hover {
-    cursor: pointer;
-    opacity: 1;
-    transition: 0.2s opacity;
-  }
-
   svg,
   path {
     font-size: 2rem;
