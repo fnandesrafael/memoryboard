@@ -60,6 +60,6 @@ export const SmokeElement = styled(motion.img)`
   height: 64rem;
   left: -16rem;
   mix-blend-mode: lighten;
-  opacity: 0.25;
+  pointer-events: none;
   position: absolute;
 `;
