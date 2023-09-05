@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import { motion } from 'framer-motion';
 import grunge from '@assets/textures/grunge.png';
 import grid from '@assets/textures/grid.png';
 
@@ -15,6 +16,7 @@ export const Overall = createGlobalStyle`
   body {
     background-color: #131313;
     color: #B3B0AA;
+    overflow: hidden;
 
     &::after {
       background-image: ${`url(${grunge})`};
@@ -51,4 +53,13 @@ export const AppWrapper = styled.div`
     width: 100%;
     z-index: 10;
   }
+`;
+
+export const SmokeElement = styled(motion.img)`
+  bottom: -12rem;
+  left: -16rem;
+  height: 64rem;
+  mix-blend-mode: lighten;
+  opacity: 0.25;
+  position: absolute;
 `;
