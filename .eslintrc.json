@@ -26,7 +26,8 @@
       "png": "always",
       "jpg": "always",
       "jpeg": "always",
-      "svg": "always"
+      "svg": "always",
+      "gif": "always"
     }],
     "no-promise-executor-return": "off"
   }
