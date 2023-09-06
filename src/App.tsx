@@ -1,5 +1,4 @@
 import React from 'react';
-import { v4 as uuid } from 'uuid';
 import usePolaroidStore from '@store/polaroidStore';
 import smoke from '@assets/gifs/smoke.gif';
 import Importer from '@components/Importer';
@@ -28,7 +27,11 @@ function App() {
 
       <S.Board>
         {polaroids.map((polaroid) => (
-          <Polaroid src={URL.createObjectURL(polaroid)} key={uuid()} />
+          <Polaroid
+            key={polaroid.id}
+            target={polaroid.id}
+            src={URL.createObjectURL(polaroid)}
+          />
         ))}
       </S.Board>
 
