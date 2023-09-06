@@ -10,7 +10,6 @@ function App() {
   return (
     <S.AppWrapper>
       <S.SmokeElement
-        key="smoke-element"
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.15 }}
         transition={{ duration: 10, ease: 'easeInOut' }}
