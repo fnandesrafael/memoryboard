@@ -2,12 +2,12 @@ import { create } from 'zustand';
 
 type ImportStoreProps = {
   isImporting: boolean;
-  setIsImporting: () => void;
+  setIsImporting: (state: boolean) => void;
 };
 
 const useImportStore = create<ImportStoreProps>((set) => ({
   isImporting: false,
-  setIsImporting: () => set(() => ({ isImporting: true })),
+  setIsImporting: (state) => set(() => ({ isImporting: state })),
 }));
 
 export default useImportStore;
