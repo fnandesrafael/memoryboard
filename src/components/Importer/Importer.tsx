@@ -12,7 +12,7 @@ export default function Importer() {
       initial={{ opacity: 0.5 }}
       whileHover={{ cursor: 'pointer', opacity: 1 }}
       transition={{ duration: 0.2 }}
-      onClick={setIsImporting}
+      onClick={() => setIsImporting(true)}
     >
       <GrFormAdd />
     </S.Button>

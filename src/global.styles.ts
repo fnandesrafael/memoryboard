@@ -3,6 +3,26 @@ import { motion } from 'framer-motion';
 import grunge from '@assets/textures/grunge.png';
 import grid from '@assets/textures/grid.png';
 
+export const AppWrapper = styled.div`
+  height: 100%;
+  width: 100%;
+
+  &::after {
+    background-image: ${`url(${grid})`};
+    background-size: cover;
+    content: '';
+    height: 100%;
+    left: 0;
+    mix-blend-mode: luminosity;
+    opacity: 0.75;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+`;
+
 export const Overall = createGlobalStyle`
   * {
     margin: 0;
@@ -32,26 +52,6 @@ export const Overall = createGlobalStyle`
       width: 100%;
       z-index: 20;
     }
-  }
-`;
-
-export const AppWrapper = styled.div`
-  height: 100%;
-  width: 100%;
-
-  &::after {
-    background-image: ${`url(${grid})`};
-    background-size: cover;
-    content: '';
-    height: 100%;
-    left: 0;
-    mix-blend-mode: luminosity;
-    opacity: 0.75;
-    pointer-events: none;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 0;
   }
 `;
 
