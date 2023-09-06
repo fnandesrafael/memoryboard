@@ -3,6 +3,7 @@ import { AnimatePresence } from 'framer-motion';
 import { GrFormClose } from 'react-icons/gr';
 import { EASE_SWEET } from '@constants/animations/eases';
 import useImportStore from '@store/importStore';
+import useEscape from '@hooks/useEscape';
 
 import * as S from './styles';
 
@@ -12,6 +13,8 @@ type ModalProps = {
 
 export default function Modal({ children }: ModalProps) {
   const { isImporting, setIsImporting } = useImportStore();
+
+  useEscape();
 
   return (
     <AnimatePresence mode="wait">
