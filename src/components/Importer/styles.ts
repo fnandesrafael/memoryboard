@@ -14,7 +14,7 @@ export const Button = styled(motion.button)`
   right: 2rem;
   transition: 0.2s opacity;
   width: 4rem;
-  z-index: 30;
+  z-index: calc(infinity);
 
   svg,
   path {

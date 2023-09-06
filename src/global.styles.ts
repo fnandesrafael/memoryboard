@@ -68,5 +68,5 @@ export const SmokeElement = styled(motion.img)`
   mix-blend-mode: lighten;
   pointer-events: none;
   position: absolute;
-  z-index: 50;
+  z-index: calc(infinity);
 `;
