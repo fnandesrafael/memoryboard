@@ -2,6 +2,7 @@ import React from 'react';
 import smoke from '@assets/gifs/smoke.gif';
 import Importer from '@components/Importer';
 import Modal from '@components/Modal';
+import Dropzone from '@components/Dropzone';
 
 import * as S from './global.styles';
 
@@ -17,7 +18,9 @@ function App() {
         alt=""
       />
 
-      <Modal>Lorem Ipsum</Modal>
+      <Modal>
+        <Dropzone />
+      </Modal>
 
       <Importer />
     </S.AppWrapper>
