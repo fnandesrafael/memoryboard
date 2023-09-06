@@ -16,6 +16,7 @@
     "react-dropzone": "^14.2.3",
     "react-icons": "^4.10.1",
     "styled-components": "^6.0.7",
+    "uuid": "^9.0.0",
     "zustand": "^4.4.1"
   },
   "devDependencies": {
