@@ -2,16 +2,19 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const Image = styled(motion.img)`
-  height: 24rem;
+  height: 100%;
   object-fit: cover;
-  position: absolute;
-  width: 20rem;
+  pointer-events: none;
+  width: 100%;
 `;
 
 export const Wrapper = styled(motion.div)`
   align-items: center;
   display: flex;
   flex-flow: column;
+  height: 24rem;
   overflow: hidden;
+  position: absolute;
+  width: 20rem;
   z-index: 40;
 `;

@@ -4,7 +4,7 @@ import { CustomFile } from '@components/Dropzone/Dropzone';
 type PolaroidStoreProps = {
   polaroids: Array<CustomFile>;
   setPolaroids: (payload: Array<CustomFile>) => void;
-  updatePosition: (payload: Array<CustomFile>) => void;
+  recoverPolaroids: (payload: Array<CustomFile>) => void;
 };
 
 const usePolaroidStore = create<PolaroidStoreProps>((set) => ({
@@ -13,7 +13,7 @@ const usePolaroidStore = create<PolaroidStoreProps>((set) => ({
     set((prevState) => ({
       polaroids: [...prevState.polaroids, ...payload],
     })),
-  updatePosition: (payload: Array<CustomFile>) =>
+  recoverPolaroids: (payload: Array<CustomFile>) =>
     set(() => ({
       polaroids: [...payload],
     })),

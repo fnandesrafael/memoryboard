@@ -1,15 +1,17 @@
 import React from 'react';
 import usePolaroidStore from '@store/polaroidStore';
+import useLocalStorage from '@hooks/useLocalStorage';
 import smoke from '@assets/gifs/smoke.gif';
 import Importer from '@components/Importer';
 import Modal from '@components/Modal';
 import Dropzone from '@components/Dropzone';
-
 import Polaroid from '@components/Polaroid';
+
 import * as S from './global.styles';
 
 function App() {
   const { polaroids } = usePolaroidStore();
+  useLocalStorage();
 
   return (
     <S.AppWrapper>
@@ -31,6 +33,7 @@ function App() {
             key={polaroid.id}
             target={polaroid.id}
             src={URL.createObjectURL(polaroid)}
+            position={polaroid.position}
           />
         ))}
       </S.Board>

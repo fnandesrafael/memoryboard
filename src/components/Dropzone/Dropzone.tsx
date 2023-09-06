@@ -15,7 +15,7 @@ export class CustomFile extends File {
     file: Blob,
     filename: string,
     id: string,
-    position = { x: 0, y: 0 },
+    position: { x: number; y: number },
   ) {
     super([file], filename);
     this.id = id;
@@ -32,7 +32,13 @@ export default function Dropzone() {
 
   useEffect(() => {
     setPolaroids(
-      acceptedFiles.map((file) => new CustomFile(file, file.name, uuid())),
+      acceptedFiles.map(
+        (file) =>
+          new CustomFile(file, file.name, uuid(), {
+            x: Math.floor(Math.random() * 101) + 450,
+            y: Math.floor(Math.random() * 101) + 100,
+          }),
+      ),
     );
   }, [acceptedFiles, setPolaroids]);
 
