@@ -1,6 +1,6 @@
 import React from 'react';
-import usePolaroidStore from '@store/polaroidStore';
 import { LuRedo, LuUndo, LuTrash } from 'react-icons/lu';
+import usePolaroidStore from '@store/polaroidStore';
 
 import * as S from './styles';
 
@@ -19,14 +19,16 @@ export default function ContextMenu({ position }: ContextMenuProps) {
     setPolaroids(filteredPolaroids);
   };
 
+  const sendToBack = () => {};
+
   return (
     <S.Container style={{ top: position.top - 1, left: position.left - 1 }}>
-      <S.Option $hasUnderline onClick={() => console.log('front')}>
+      <S.Option $hasUnderline>
         <S.Text>Bring to front</S.Text>
         <LuRedo />
       </S.Option>
 
-      <S.Option $hasUnderline onClick={() => console.log('back')}>
+      <S.Option $hasUnderline onClick={sendToBack}>
         <S.Text>Send to back</S.Text>
         <LuUndo />
       </S.Option>

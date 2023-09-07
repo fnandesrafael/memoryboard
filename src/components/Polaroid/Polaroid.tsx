@@ -18,7 +18,10 @@ export default function Polaroid({
   return (
     <S.Wrapper
       id={target}
-      style={{ x: position.x, y: position.y }}
+      style={{
+        x: position.x,
+        y: position.y,
+      }}
       whileHover={{
         cursor: 'move',
         scale: 1.015,

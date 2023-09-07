@@ -39,7 +39,7 @@ function App() {
             key={polaroid.id}
             target={polaroid.id}
             src={URL.createObjectURL(polaroid)}
-            position={polaroid.position}
+            position={{ ...polaroid.position }}
             onContextMenu={handleOpening}
           />
         ))}
