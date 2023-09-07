@@ -9,8 +9,10 @@ type OptionProps = {
 export const Container = styled(motion.div)`
   align-items: center;
   background-color: #0a0a0a;
+  border-radius: 0.25rem;
   display: flex;
   flex-flow: column;
+  overflow: hidden;
   position: absolute;
   width: 9rem;
   z-index: calc(infinity);

@@ -9,7 +9,7 @@ type ContextMenuProps = {
 
 export default function ContextMenu({ position }: ContextMenuProps) {
   return (
-    <S.Container style={{ top: position.top, left: position.left }}>
+    <S.Container style={{ top: position.top - 1, left: position.left - 1 }}>
       <S.Option $hasUnderline>
         <S.Text>Bring to front</S.Text>
         <LuRedo />
