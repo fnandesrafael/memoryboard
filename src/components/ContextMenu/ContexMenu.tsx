@@ -33,7 +33,7 @@ export default function ContextMenu({ position }: ContextMenuProps) {
         <LuUndo />
       </S.Option>
 
-      <S.Option $iconColor="red" onClick={handleDeletiton}>
+      <S.Option $iconColor="#dc2626" onClick={handleDeletiton}>
         <S.Text>Remove</S.Text>
         <LuTrash />
       </S.Option>
