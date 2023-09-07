@@ -33,18 +33,20 @@ export const Container = styled(motion.div)`
   flex-flow: column;
   height: 16rem;
   justify-content: center;
+  margin-bottom: 6rem;
   width: 32rem;
 `;
 
 export const Wrapper = styled(motion.div)`
   align-items: center;
+  background-color: #00000040;
   display: flex;
   flex-flow: column;
   height: 100%;
   justify-content: center;
   position: fixed;
   width: 100%;
-  z-index: 40;
+  z-index: calc(infinity);
 `;
 
 export default Container;

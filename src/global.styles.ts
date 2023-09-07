@@ -23,6 +23,12 @@ export const AppWrapper = styled.div`
   }
 `;
 
+export const Board = styled.main`
+  display: flex;
+  height: 100%;
+  width: 100%;
+`;
+
 export const Overall = createGlobalStyle`
   * {
     margin: 0;
@@ -57,9 +63,10 @@ export const Overall = createGlobalStyle`
 
 export const SmokeElement = styled(motion.img)`
   bottom: -12rem;
-  height: 64rem;
+  height: 72rem;
   left: -16rem;
   mix-blend-mode: lighten;
   pointer-events: none;
   position: absolute;
+  z-index: calc(infinity);
 `;
