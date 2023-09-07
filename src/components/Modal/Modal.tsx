@@ -19,24 +19,18 @@ export default function Modal({ children }: ModalProps) {
   return (
     <AnimatePresence mode="wait">
       {isImporting && (
-        <S.Wrapper onClick={() => setIsImporting(false)}>
-          <S.Button
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4, ease: EASE_SWEET }}
-            onClick={() => setIsImporting(false)}
-          >
+        <S.Wrapper
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2, ease: EASE_SWEET }}
+          onClick={() => setIsImporting(false)}
+        >
+          <S.Button onClick={() => setIsImporting(false)}>
             <GrFormClose />
           </S.Button>
 
-          <S.Container
-            initial={{ opacity: 0, y: 500 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 500 }}
-            transition={{ duration: 0.4, ease: EASE_SWEET }}
-            onClick={(e) => e.stopPropagation()}
-          >
+          <S.Container onClick={(e) => e.stopPropagation()}>
             {children}
           </S.Container>
         </S.Wrapper>
