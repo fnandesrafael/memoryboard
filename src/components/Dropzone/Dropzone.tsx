@@ -24,14 +24,14 @@ export class CustomFile extends File {
 }
 
 export default function Dropzone() {
-  const { setPolaroids } = usePolaroidStore();
+  const { addPolaroids } = usePolaroidStore();
   const { acceptedFiles, getRootProps, getInputProps, isDragActive } =
     useDropzone({
       accept: { 'image/*': [] },
     });
 
   useEffect(() => {
-    setPolaroids(
+    addPolaroids(
       acceptedFiles.map(
         (file) =>
           new CustomFile(file, file.name, uuid(), {
@@ -40,7 +40,7 @@ export default function Dropzone() {
           }),
       ),
     );
-  }, [acceptedFiles, setPolaroids]);
+  }, [acceptedFiles, addPolaroids]);
 
   return (
     <S.Container {...getRootProps()} $isDragActive={isDragActive}>

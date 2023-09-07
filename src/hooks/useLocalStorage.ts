@@ -4,7 +4,7 @@ import usePolaroidStore from '@store/polaroidStore';
 import { useEffect } from 'react';
 
 const useLocalStorage = () => {
-  const { polaroids, updatePosition, recoverPolaroids } = usePolaroidStore();
+  const { polaroids, setPolaroids } = usePolaroidStore();
 
   useEffect(() => {
     const persistedData = JSON.parse(localStorage.getItem('polaroids')) || [];
@@ -16,8 +16,8 @@ const useLocalStorage = () => {
       },
     );
 
-    recoverPolaroids(parsedPolaroids);
-  }, [recoverPolaroids]);
+    setPolaroids(parsedPolaroids);
+  }, [setPolaroids]);
 
   useEffect(() => {
     const parsePolaroids = async () => {
@@ -44,7 +44,7 @@ const useLocalStorage = () => {
     };
 
     parsePolaroids();
-  }, [polaroids, updatePosition]);
+  }, [polaroids]);
 };
 
 export default useLocalStorage;
