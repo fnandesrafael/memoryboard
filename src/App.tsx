@@ -6,6 +6,7 @@ import Importer from '@components/Importer';
 import Modal from '@components/Modal';
 import Dropzone from '@components/Dropzone';
 import Polaroid from '@components/Polaroid';
+import ContextMenu from '@components/ContextMenu';
 
 import * as S from './global.styles';
 
@@ -28,6 +29,8 @@ function App() {
       </Modal>
 
       <S.Board>
+        <ContextMenu />
+
         {polaroids.map((polaroid) => (
           <Polaroid
             key={polaroid.id}
