@@ -39,7 +39,7 @@ export const Container = styled(motion.div)`
 
 export const Wrapper = styled(motion.div)`
   align-items: center;
-  background-color: rgb(0, 0, 0, 25%);
+  background-color: #00000040;
   display: flex;
   flex-flow: column;
   height: 100%;
