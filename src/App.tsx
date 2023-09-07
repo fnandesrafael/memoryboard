@@ -1,6 +1,7 @@
 import React from 'react';
 import usePolaroidStore from '@store/polaroidStore';
 import useLocalStorage from '@hooks/useLocalStorage';
+import useContextMenu from '@hooks/useContextMenu';
 import smoke from '@assets/gifs/smoke.gif';
 import Importer from '@components/Importer';
 import Modal from '@components/Modal';
@@ -12,6 +13,8 @@ import * as S from './global.styles';
 
 function App() {
   const { polaroids } = usePolaroidStore();
+  const { isVisible, position, handleOpening } = useContextMenu();
+
   useLocalStorage();
 
   return (
@@ -29,7 +32,7 @@ function App() {
       </Modal>
 
       <S.Board>
-        <ContextMenu />
+        {isVisible && <ContextMenu position={position} />}
 
         {polaroids.map((polaroid) => (
           <Polaroid
@@ -37,6 +40,7 @@ function App() {
             target={polaroid.id}
             src={URL.createObjectURL(polaroid)}
             position={polaroid.position}
+            onContextMenu={handleOpening}
           />
         ))}
       </S.Board>

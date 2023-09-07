@@ -6,9 +6,15 @@ type PolaroidProps = {
   target: string;
   src: string;
   position: { x: number; y: number };
+  onContextMenu: (e) => void;
 };
 
-export default function Polaroid({ target, src, position }: PolaroidProps) {
+export default function Polaroid({
+  target,
+  src,
+  position,
+  onContextMenu,
+}: PolaroidProps) {
   return (
     <S.Wrapper
       id={target}
@@ -20,6 +26,7 @@ export default function Polaroid({ target, src, position }: PolaroidProps) {
       }}
       drag
       dragMomentum={false}
+      onContextMenu={onContextMenu}
     >
       <S.Image src={src} />
     </S.Wrapper>

@@ -3,9 +3,13 @@ import { LuRedo, LuUndo, LuTrash } from 'react-icons/lu';
 
 import * as S from './styles';
 
-export default function ClickMenu() {
+type ContextMenuProps = {
+  position: { top: number; left: number };
+};
+
+export default function ContextMenu({ position }: ContextMenuProps) {
   return (
-    <S.Container>
+    <S.Container style={{ top: position.top, left: position.left }}>
       <S.Option $hasUnderline>
         <S.Text>Bring to front</S.Text>
         <LuRedo />

@@ -13,7 +13,7 @@ export const Container = styled(motion.div)`
   flex-flow: column;
   position: absolute;
   width: 9rem;
-  z-index: 30;
+  z-index: calc(infinity);
 `;
 
 export const Option = styled(motion.div)<OptionProps>`
