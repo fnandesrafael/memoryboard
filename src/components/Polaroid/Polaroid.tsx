@@ -13,6 +13,11 @@ export default function Polaroid({ target, src, position }: PolaroidProps) {
     <S.Wrapper
       id={target}
       style={{ x: position.x, y: position.y }}
+      whileHover={{
+        cursor: 'move',
+        scale: 1.015,
+        transition: { duration: 0.2 },
+      }}
       drag
       dragMomentum={false}
     >
