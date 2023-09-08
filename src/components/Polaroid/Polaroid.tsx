@@ -3,24 +3,22 @@ import React from 'react';
 import * as S from './styles';
 
 type PolaroidProps = {
-  target: string;
-  src: string;
-  position: { x: number; y: number };
+  data: {
+    id: string;
+    file: File;
+    position: { x: number; y: number };
+    layer: number;
+  };
   onContextMenu: (e) => void;
 };
 
-export default function Polaroid({
-  target,
-  src,
-  position,
-  onContextMenu,
-}: PolaroidProps) {
+export default function Polaroid({ data, onContextMenu }: PolaroidProps) {
   return (
     <S.Wrapper
-      id={target}
+      id={data.id}
       style={{
-        x: position.x,
-        y: position.y,
+        x: data.position.x,
+        y: data.position.y,
       }}
       whileHover={{
         cursor: 'move',
@@ -31,7 +29,7 @@ export default function Polaroid({
       dragMomentum={false}
       onContextMenu={onContextMenu}
     >
-      <S.Image src={src} />
+      <S.Image src={URL.createObjectURL(data.file)} />
     </S.Wrapper>
   );
 }

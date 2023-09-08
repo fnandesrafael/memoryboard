@@ -1,6 +1,6 @@
 import React from 'react';
 import usePolaroidStore from '@store/polaroidStore';
-import useLocalStorage from '@hooks/useLocalStorage';
+// import useLocalStorage from '@hooks/useLocalStorage';
 import useContextMenu from '@hooks/useContextMenu';
 import smoke from '@assets/gifs/smoke.gif';
 import Importer from '@components/Importer';
@@ -15,7 +15,7 @@ function App() {
   const { polaroids } = usePolaroidStore();
   const { isVisible, position, handleOpening } = useContextMenu();
 
-  useLocalStorage();
+  // useLocalStorage();
 
   return (
     <S.AppWrapper>
@@ -37,9 +37,7 @@ function App() {
         {polaroids.map((polaroid) => (
           <Polaroid
             key={polaroid.id}
-            target={polaroid.id}
-            src={URL.createObjectURL(polaroid)}
-            position={{ ...polaroid.position }}
+            data={polaroid}
             onContextMenu={handleOpening}
           />
         ))}

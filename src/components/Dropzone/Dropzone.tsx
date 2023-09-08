@@ -6,23 +6,6 @@ import usePolaroidStore from '@store/polaroidStore';
 
 import * as S from './styles';
 
-export class CustomFile extends File {
-  id: string;
-
-  position: { x: number; y: number };
-
-  constructor(
-    file: Blob,
-    filename: string,
-    id: string,
-    position: { x: number; y: number },
-  ) {
-    super([file], filename);
-    this.id = id;
-    this.position = position;
-  }
-}
-
 export default function Dropzone() {
   const { addPolaroids } = usePolaroidStore();
   const { acceptedFiles, getRootProps, getInputProps, isDragActive } =
@@ -32,13 +15,17 @@ export default function Dropzone() {
 
   useEffect(() => {
     addPolaroids(
-      acceptedFiles.map(
-        (file) =>
-          new CustomFile(file, file.name, uuid(), {
+      acceptedFiles.map((file, index) => {
+        return {
+          id: uuid(),
+          file,
+          position: {
             x: Math.floor(Math.random() * 101) + 450,
             y: Math.floor(Math.random() * 101) + 100,
-          }),
-      ),
+          },
+          layer: 40 + (index + 1),
+        };
+      }),
     );
   }, [acceptedFiles, addPolaroids]);
 
