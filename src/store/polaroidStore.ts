@@ -1,8 +1,9 @@
 import { create } from 'zustand';
 
-type Polaroid = {
+export type Polaroid = {
   id: string;
-  file: File;
+  file: Blob | string;
+  fileName: string;
   position: { x: number; y: number };
   layer: number;
 };

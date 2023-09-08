@@ -1,5 +1,5 @@
 import { dataURLToBlob } from 'blob-util';
-import usePolaroidStore from '@store/polaroidStore';
+import usePolaroidStore, { Polaroid } from '@store/polaroidStore';
 import { useEffect } from 'react';
 
 const useLocalStorage = () => {
@@ -15,7 +15,7 @@ const useLocalStorage = () => {
             resolve(event.target.result);
           };
 
-          reader.readAsDataURL(polaroid.file);
+          reader.readAsDataURL(polaroid.file as Blob);
         });
 
         return { ...polaroid, file: dataUrl };
@@ -32,9 +32,9 @@ const useLocalStorage = () => {
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem('polaroids')) || [];
 
-    const recoveredData = data.map((obj) => {
-      const blob = dataURLToBlob(obj.file);
-      const recoveredFile = new File([blob], 'polaroid');
+    const recoveredData = data.map((obj: Polaroid) => {
+      const blob = dataURLToBlob(obj.file as string);
+      const recoveredFile = new File([blob], obj.fileName);
       return { ...obj, file: recoveredFile };
     });
 

@@ -19,6 +19,7 @@ export default function Dropzone() {
         return {
           id: uuid(),
           file,
+          fileName: file.name,
           position: {
             x: Math.floor(Math.random() * 101) + 450,
             y: Math.floor(Math.random() * 101) + 100,
