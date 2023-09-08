@@ -24,7 +24,7 @@ export default function Dropzone() {
             x: Math.floor(Math.random() * 101) + 450,
             y: Math.floor(Math.random() * 101) + 100,
           },
-          layer: 40 + (index + 1),
+          layer: 40 + index,
         };
       }),
     );
