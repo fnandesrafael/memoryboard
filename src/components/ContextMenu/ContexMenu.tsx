@@ -14,7 +14,7 @@ export default function ContextMenu({ position }: ContextMenuProps) {
   const bringToFront = () => {
     const frontLayer = Math.max(...polaroids.map((polaroid) => polaroid.layer));
     const newLayer = frontLayer + 1;
-    targetedPolaroid.layer = newLayer < 40 ? 40 : newLayer;
+    targetedPolaroid.layer = newLayer;
 
     setPolaroids([...polaroids]);
   };
@@ -22,6 +22,7 @@ export default function ContextMenu({ position }: ContextMenuProps) {
   const sendToBack = () => {
     const backLayer = Math.min(...polaroids.map((polaroid) => polaroid.layer));
     const newLayer = backLayer - 1;
+
     targetedPolaroid.layer = newLayer;
 
     if (newLayer === 40) {
