@@ -1,14 +1,10 @@
 import React from 'react';
+import { PolaroidObject } from '@store/polaroidStore';
 
 import * as S from './styles';
 
 type PolaroidProps = {
-  data: {
-    id: string;
-    file: File;
-    position: { x: number; y: number };
-    layer: number;
-  };
+  data: PolaroidObject;
   onContextMenu: (e) => void;
 };
 
@@ -19,6 +15,7 @@ export default function Polaroid({ data, onContextMenu }: PolaroidProps) {
       style={{
         x: data.position.x,
         y: data.position.y,
+        zIndex: data.layer,
       }}
       whileHover={{
         cursor: 'move',
@@ -29,7 +26,7 @@ export default function Polaroid({ data, onContextMenu }: PolaroidProps) {
       dragMomentum={false}
       onContextMenu={onContextMenu}
     >
-      <S.Image src={URL.createObjectURL(data.file)} />
+      <S.Image src={URL.createObjectURL(data.file as Blob)} />
     </S.Wrapper>
   );
 }

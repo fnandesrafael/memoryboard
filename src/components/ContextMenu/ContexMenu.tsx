@@ -11,6 +11,29 @@ type ContextMenuProps = {
 export default function ContextMenu({ position }: ContextMenuProps) {
   const { polaroids, targetedPolaroid, setPolaroids } = usePolaroidStore();
 
+  const bringToFront = () => {
+    const frontLayer = Math.max(...polaroids.map((polaroid) => polaroid.layer));
+    const newLayer = frontLayer + 1;
+    targetedPolaroid.layer = newLayer < 40 ? 40 : newLayer;
+
+    setPolaroids([...polaroids]);
+  };
+
+  const sendToBack = () => {
+    const backLayer = Math.min(...polaroids.map((polaroid) => polaroid.layer));
+    const newLayer = backLayer - 1;
+    targetedPolaroid.layer = newLayer;
+
+    if (newLayer === 40) {
+      polaroids.map((polaroid) => ({
+        ...polaroid,
+        layer: polaroid.layer + 1,
+      }));
+    }
+
+    setPolaroids([...polaroids]);
+  };
+
   const handleDeletion = () => {
     const filteredPolaroids = polaroids.filter(
       (polaroid) => polaroid.id !== targetedPolaroid.id,
@@ -19,11 +42,9 @@ export default function ContextMenu({ position }: ContextMenuProps) {
     setPolaroids(filteredPolaroids);
   };
 
-  const sendToBack = () => {};
-
   return (
     <S.Container style={{ top: position.top - 1, left: position.left - 1 }}>
-      <S.Option $hasUnderline>
+      <S.Option $hasUnderline onClick={bringToFront}>
         <S.Text>Bring to front</S.Text>
         <LuRedo />
       </S.Option>

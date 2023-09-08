@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-export type Polaroid = {
+export type PolaroidObject = {
   id: string;
   file: Blob | string;
   fileName: string;
@@ -9,25 +9,25 @@ export type Polaroid = {
 };
 
 type PolaroidStoreProps = {
-  polaroids: Array<Polaroid>;
-  targetedPolaroid: Polaroid;
-  addPolaroids: (payload: Array<Polaroid>) => void;
-  setPolaroids: (payload: Array<Polaroid>) => void;
-  targetPolaroid: (payload: Polaroid) => void;
+  polaroids: Array<PolaroidObject>;
+  targetedPolaroid: PolaroidObject;
+  addPolaroids: (payload: Array<PolaroidObject>) => void;
+  setPolaroids: (payload: Array<PolaroidObject>) => void;
+  targetPolaroid: (payload: PolaroidObject) => void;
 };
 
 const usePolaroidStore = create<PolaroidStoreProps>((set) => ({
   polaroids: [],
   targetedPolaroid: null,
-  addPolaroids: (payload: Array<Polaroid>) =>
+  addPolaroids: (payload: Array<PolaroidObject>) =>
     set((prevState) => ({
       polaroids: [...prevState.polaroids, ...payload],
     })),
-  setPolaroids: (payload: Array<Polaroid>) =>
+  setPolaroids: (payload: Array<PolaroidObject>) =>
     set(() => ({
       polaroids: [...payload],
     })),
-  targetPolaroid: (payload: Polaroid) =>
+  targetPolaroid: (payload: PolaroidObject) =>
     set(() => ({
       targetedPolaroid: payload,
     })),
