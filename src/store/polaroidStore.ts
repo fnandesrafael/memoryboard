@@ -1,26 +1,33 @@
 import { create } from 'zustand';
-import { CustomFile } from '@components/Dropzone/Dropzone';
+
+export type PolaroidObject = {
+  id: string;
+  file: Blob | string;
+  fileName: string;
+  position: { x: number; y: number };
+  layer: number;
+};
 
 type PolaroidStoreProps = {
-  targetedPolaroid: CustomFile;
-  polaroids: Array<CustomFile>;
-  addPolaroids: (payload: Array<CustomFile>) => void;
-  setPolaroids: (payload: Array<CustomFile>) => void;
-  targetPolaroid: (payload: CustomFile) => void;
+  polaroids: Array<PolaroidObject>;
+  targetedPolaroid: PolaroidObject;
+  addPolaroids: (payload: Array<PolaroidObject>) => void;
+  setPolaroids: (payload: Array<PolaroidObject>) => void;
+  targetPolaroid: (payload: PolaroidObject) => void;
 };
 
 const usePolaroidStore = create<PolaroidStoreProps>((set) => ({
-  targetedPolaroid: null,
   polaroids: [],
-  addPolaroids: (payload: Array<CustomFile>) =>
+  targetedPolaroid: null,
+  addPolaroids: (payload: Array<PolaroidObject>) =>
     set((prevState) => ({
       polaroids: [...prevState.polaroids, ...payload],
     })),
-  setPolaroids: (payload: Array<CustomFile>) =>
+  setPolaroids: (payload: Array<PolaroidObject>) =>
     set(() => ({
       polaroids: [...payload],
     })),
-  targetPolaroid: (payload: CustomFile) =>
+  targetPolaroid: (payload: PolaroidObject) =>
     set(() => ({
       targetedPolaroid: payload,
     })),

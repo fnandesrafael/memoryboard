@@ -1,50 +1,45 @@
 import { dataURLToBlob } from 'blob-util';
-import { CustomFile } from '@components/Dropzone/Dropzone';
-import usePolaroidStore from '@store/polaroidStore';
+import usePolaroidStore, { PolaroidObject } from '@store/polaroidStore';
 import { useEffect } from 'react';
 
 const useLocalStorage = () => {
   const { polaroids, setPolaroids } = usePolaroidStore();
 
   useEffect(() => {
-    const persistedData = JSON.parse(localStorage.getItem('polaroids')) || [];
-
-    const parsedPolaroids = persistedData.map(
-      ({ dataUrl, filename, id, position }) => {
-        const blob = dataURLToBlob(dataUrl);
-        return new CustomFile(blob, filename, id, position);
-      },
-    );
-
-    setPolaroids(parsedPolaroids);
-  }, [setPolaroids]);
-
-  useEffect(() => {
-    const parsePolaroids = async () => {
-      const promises = polaroids.map(async (polaroid) => {
-        return new Promise((resolve) => {
+    const convertFiles = async () => {
+      const result = polaroids.map(async (polaroid) => {
+        const dataUrl = await new Promise((resolve) => {
           const reader = new FileReader();
 
           reader.onload = (event) => {
-            resolve({
-              id: polaroid.id,
-              name: polaroid.name,
-              position: polaroid.position,
-              dataUrl: event.target.result,
-            });
+            resolve(event.target.result);
           };
 
-          reader.readAsDataURL(polaroid);
+          reader.readAsDataURL(polaroid.file as Blob);
         });
+
+        return { ...polaroid, file: dataUrl };
       });
 
-      const parsedPolaroids = await Promise.all(promises);
+      const convertedData = await Promise.all(result);
 
-      localStorage.setItem('polaroids', JSON.stringify(parsedPolaroids));
+      localStorage.setItem('polaroids', JSON.stringify(convertedData));
     };
 
-    parsePolaroids();
+    convertFiles();
   }, [polaroids]);
+
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem('polaroids')) || [];
+
+    const recoveredData = data.map((obj: PolaroidObject) => {
+      const blob = dataURLToBlob(obj.file as string);
+      const recoveredFile = new File([blob], obj.fileName);
+      return { ...obj, file: recoveredFile };
+    });
+
+    setPolaroids(recoveredData);
+  }, [setPolaroids]);
 };
 
 export default useLocalStorage;

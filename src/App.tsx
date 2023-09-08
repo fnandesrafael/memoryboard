@@ -37,9 +37,7 @@ function App() {
         {polaroids.map((polaroid) => (
           <Polaroid
             key={polaroid.id}
-            target={polaroid.id}
-            src={URL.createObjectURL(polaroid)}
-            position={{ ...polaroid.position }}
+            data={polaroid}
             onContextMenu={handleOpening}
           />
         ))}
