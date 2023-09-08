@@ -11,7 +11,7 @@ type ContextMenuProps = {
 export default function ContextMenu({ position }: ContextMenuProps) {
   const { polaroids, targetedPolaroid, setPolaroids } = usePolaroidStore();
 
-  const handleDeletiton = () => {
+  const handleDeletion = () => {
     const filteredPolaroids = polaroids.filter(
       (polaroid) => polaroid.id !== targetedPolaroid.id,
     );
@@ -33,7 +33,7 @@ export default function ContextMenu({ position }: ContextMenuProps) {
         <LuUndo />
       </S.Option>
 
-      <S.Option $iconColor="#dc2626" onClick={handleDeletiton}>
+      <S.Option $iconColor="#dc2626" onClick={handleDeletion}>
         <S.Text>Remove</S.Text>
         <LuTrash />
       </S.Option>
