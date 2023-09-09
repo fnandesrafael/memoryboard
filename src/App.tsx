@@ -21,7 +21,7 @@ function App() {
     <S.AppWrapper>
       <S.SmokeElement
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.5 }}
+        animate={{ opacity: 0.25 }}
         transition={{ duration: 10, ease: 'easeInOut' }}
         src={smoke}
         alt=""
@@ -38,7 +38,7 @@ function App() {
           <Polaroid
             key={polaroid.id}
             data={polaroid}
-            onContextMenu={handleOpening}
+            handleContextMenu={handleOpening}
           />
         ))}
       </S.Board>

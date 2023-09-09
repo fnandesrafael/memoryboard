@@ -32,10 +32,11 @@ export default function Dropzone() {
 
   return (
     <S.Container {...getRootProps()} $isDragActive={isDragActive}>
+      <input {...getInputProps()} />
+
       <MdOutlineFileUpload />
       <S.Heading>Import your images</S.Heading>
       <S.Paragraph>Click or drag to upload them</S.Paragraph>
-      <input {...getInputProps()} />
     </S.Container>
   );
 }

@@ -15,6 +15,7 @@ export const Wrapper = styled(motion.div)`
   height: 24rem;
   overflow: hidden;
   position: absolute;
+  transform-origin: center;
   width: 20rem;
   z-index: 40;
 `;

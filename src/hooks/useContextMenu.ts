@@ -13,7 +13,7 @@ const useContextMenu = () => {
     setIsVisible(true);
 
     const [filteredPolaroid] = polaroids.filter(
-      (polaroid) => polaroid.id === e.target.id,
+      (polaroid) => polaroid.id === (e.target.id as string),
     );
 
     targetPolaroid(filteredPolaroid);

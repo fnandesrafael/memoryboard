@@ -1,14 +1,47 @@
 import React from 'react';
-import { PolaroidObject } from '@store/polaroidStore';
+import usePolaroidStore, { PolaroidObject } from '@store/polaroidStore';
 
 import * as S from './styles';
 
 type PolaroidProps = {
   data: PolaroidObject;
-  onContextMenu: (e) => void;
+  handleContextMenu: (e) => void;
 };
 
-export default function Polaroid({ data, onContextMenu }: PolaroidProps) {
+export default function Polaroid({ data, handleContextMenu }: PolaroidProps) {
+  const { polaroids, setPolaroids } = usePolaroidStore();
+
+  const getPosition = (
+    element: HTMLElement,
+  ): {
+    x: number;
+    y: number;
+  } => {
+    const transform = window
+      .getComputedStyle(element)
+      .getPropertyValue('transform');
+    const matrix = new DOMMatrixReadOnly(transform);
+
+    return {
+      x: matrix.m41,
+      y: matrix.m42,
+    };
+  };
+
+  const handleTranslation = (e) => {
+    e.preventDefault();
+
+    const newPosition = getPosition(e.target);
+    const updatedPolaroids = polaroids.map((polaroid) => {
+      if (polaroid.id === e.target.id) {
+        return { ...polaroid, position: newPosition };
+      }
+      return polaroid;
+    });
+
+    setPolaroids(updatedPolaroids);
+  };
+
   return (
     <S.Wrapper
       id={data.id}
@@ -24,7 +57,8 @@ export default function Polaroid({ data, onContextMenu }: PolaroidProps) {
       }}
       drag
       dragMomentum={false}
-      onContextMenu={onContextMenu}
+      onDragEnd={(e) => handleTranslation(e)}
+      onContextMenu={handleContextMenu}
     >
       <S.Image src={URL.createObjectURL(data.file as Blob)} />
     </S.Wrapper>
