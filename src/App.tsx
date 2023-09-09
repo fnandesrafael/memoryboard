@@ -38,7 +38,7 @@ function App() {
           <Polaroid
             key={polaroid.id}
             data={polaroid}
-            onContextMenu={handleOpening}
+            handleContextMenu={handleOpening}
           />
         ))}
       </S.Board>
