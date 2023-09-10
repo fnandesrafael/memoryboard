@@ -19,7 +19,7 @@ export default function Actions({ saveInLocal }: ActionsProps) {
   return (
     <S.Wrapper>
       <S.Toggle
-        whileHover={{ rotate: 360 }}
+        whileHover={{ rotate: 270 }}
         onClick={() => setOnToggle((prevState) => !prevState)}
       >
         <GrFormAdd className="toggle-icon" />
