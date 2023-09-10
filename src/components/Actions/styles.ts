@@ -12,15 +12,15 @@ export const Action = styled(motion.button)`
   z-index: 1000;
 
   &:hover {
-    cursor: pointer;
     background-color: #1a1a1a;
+    cursor: pointer;
     transition: 0.2s background-color;
   }
 
   svg,
   path {
-    font-size: 1.25rem;
     color: #b0b3aa;
+    font-size: 1.25rem;
     stroke: #b0b3aa;
   }
 `;
@@ -37,8 +37,8 @@ export const Toggle = styled(motion.button)`
   z-index: calc(infinity);
 
   &:hover {
-    cursor: pointer;
     background-color: #1a1a1a;
+    cursor: pointer;
     transition: 0.2s background-color;
   }
 
