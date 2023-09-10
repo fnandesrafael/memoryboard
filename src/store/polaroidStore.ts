@@ -2,7 +2,7 @@ import { create } from 'zustand';
 
 export type PolaroidObject = {
   id: string;
-  file: Blob | string;
+  file: string;
   fileName: string;
   position: { x: number; y: number };
   layer: number;

@@ -62,9 +62,9 @@ export const Overall = createGlobalStyle`
 `;
 
 export const SmokeElement = styled(motion.img)`
-  bottom: -12rem;
-  height: 72rem;
-  left: -24rem;
+  bottom: -20rem;
+  height: 120rem;
+  left: -48rem;
   mix-blend-mode: lighten;
   pointer-events: none;
   position: absolute;

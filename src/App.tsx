@@ -3,7 +3,7 @@ import usePolaroidStore from '@store/polaroidStore';
 import useLocalStorage from '@hooks/useLocalStorage';
 import useContextMenu from '@hooks/useContextMenu';
 import smoke from '@assets/gifs/smoke.gif';
-import Importer from '@components/Importer';
+import Actions from '@components/Actions';
 import Modal from '@components/Modal';
 import Dropzone from '@components/Dropzone';
 import Polaroid from '@components/Polaroid';
@@ -14,18 +14,19 @@ import * as S from './global.styles';
 function App() {
   const { polaroids } = usePolaroidStore();
   const { isVisible, position, handleOpening } = useContextMenu();
-
-  useLocalStorage();
+  const { saveInLocal } = useLocalStorage();
 
   return (
     <S.AppWrapper>
       <S.SmokeElement
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.25 }}
+        animate={{ opacity: 0.2 }}
         transition={{ duration: 10, ease: 'easeInOut' }}
         src={smoke}
         alt=""
       />
+
+      <Actions saveInLocal={saveInLocal} />
 
       <Modal>
         <Dropzone />
@@ -42,8 +43,6 @@ function App() {
           />
         ))}
       </S.Board>
-
-      <Importer />
     </S.AppWrapper>
   );
 }

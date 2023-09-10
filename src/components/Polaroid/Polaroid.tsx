@@ -60,7 +60,7 @@ export default function Polaroid({ data, handleContextMenu }: PolaroidProps) {
       onDragEnd={(e) => handleTranslation(e)}
       onContextMenu={handleContextMenu}
     >
-      <S.Image src={URL.createObjectURL(data.file as Blob)} />
+      <S.Image src={data.file} />
     </S.Wrapper>
   );
 }
