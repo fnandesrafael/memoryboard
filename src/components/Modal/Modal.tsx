@@ -1,10 +1,10 @@
 import React from 'react';
-import { AnimatePresence } from 'framer-motion';
 import { GrFormClose } from 'react-icons/gr';
 import { EASE_SWEET } from '@constants/animations/eases';
 import useImportStore from '@store/importStore';
 import useEscape from '@hooks/useEscape';
 
+import { AnimatePresence } from 'framer-motion';
 import * as S from './styles';
 
 type ModalProps = {

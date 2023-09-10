@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { GrFormAdd } from 'react-icons/gr';
 
+import { AnimatePresence } from 'framer-motion';
 import * as S from '../styles';
 
 type RootProps = {
@@ -18,7 +19,7 @@ export default function Root({ children }: RootProps) {
       >
         <GrFormAdd className="toggle-icon" />
       </S.Toggle>
-      {onToggle && children}
+      <AnimatePresence mode="wait">{onToggle && children}</AnimatePresence>
     </S.Wrapper>
   );
 }

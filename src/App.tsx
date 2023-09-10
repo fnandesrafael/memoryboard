@@ -28,6 +28,10 @@ function App() {
         alt=""
       />
 
+      <Actions.Root>
+        <Actions.Importer />
+      </Actions.Root>
+
       <Modal>
         <Dropzone />
       </Modal>
@@ -43,10 +47,6 @@ function App() {
           />
         ))}
       </S.Board>
-
-      <Actions.Root>
-        <Actions.Import />
-      </Actions.Root>
     </S.AppWrapper>
   );
 }
