@@ -3,9 +3,9 @@ import usePolaroidStore from '@store/polaroidStore';
 import useLocalStorage from '@hooks/useLocalStorage';
 import useContextMenu from '@hooks/useContextMenu';
 import smoke from '@assets/gifs/smoke.gif';
-import Importer from '@components/Importer';
-import Modal from '@components/Modal';
+import { Actions } from '@components/Actions';
 import Dropzone from '@components/Dropzone';
+import Modal from '@components/Modal';
 import Polaroid from '@components/Polaroid';
 import ContextMenu from '@components/ContextMenu';
 
@@ -44,7 +44,9 @@ function App() {
         ))}
       </S.Board>
 
-      <Importer />
+      <Actions.Root>
+        <Actions.Import />
+      </Actions.Root>
     </S.AppWrapper>
   );
 }
