@@ -15,10 +15,12 @@ function App() {
   const { polaroids } = usePolaroidStore();
   const { isVisible, position, handleOpening } = useContextMenu();
 
-  useLocalStorage();
+  const { saveInLocal } = useLocalStorage();
 
   return (
     <S.AppWrapper>
+      <button onClick={saveInLocal}>Save</button>
+
       <S.SmokeElement
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.25 }}
