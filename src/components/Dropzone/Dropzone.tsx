@@ -3,7 +3,7 @@ import { useDropzone } from 'react-dropzone';
 import { MdOutlineFileUpload } from 'react-icons/md';
 import { v4 as uuid } from 'uuid';
 import usePolaroidStore from '@store/polaroidStore';
-import fileToBase64 from '@utils/fileToBase64';
+import compressImg from '@utils/compressImg';
 
 import * as S from './styles';
 
@@ -15,11 +15,11 @@ export default function Dropzone() {
     });
 
   useEffect(() => {
-    const processFiles = async () => {
-      const result = acceptedFiles.map(async (file, index) => {
+    const handleUploads = async () => {
+      const response = acceptedFiles.map(async (file, index) => {
         return {
           id: uuid(),
-          file: await fileToBase64(file),
+          file: await compressImg(file),
           fileName: file.name,
           position: {
             x: Math.floor(Math.random() * 101) + 450,
@@ -29,11 +29,24 @@ export default function Dropzone() {
         };
       });
 
-      addPolaroids(await Promise.all(result));
+      addPolaroids(await Promise.all(response));
     };
 
-    processFiles();
+    handleUploads();
   }, [acceptedFiles, addPolaroids]);
+
+  // useEffect(() => {
+  //   const handleUploads = async () => {
+  //     const response = acceptedFiles.map(async (file) => {
+  //       return compressImg(file);
+  //     });
+  //     const result = await Promise.all(response);
+
+  //     console.log(result);
+  //   };
+
+  //   handleUploads();
+  // }, [acceptedFiles]);
 
   return (
     <S.Container {...getRootProps()} $isDragActive={isDragActive}>
