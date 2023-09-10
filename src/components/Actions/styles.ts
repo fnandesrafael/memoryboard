@@ -59,4 +59,5 @@ export const Wrapper = styled.div`
   gap: 1rem;
   position: fixed;
   right: 2rem;
+  z-index: calc(infinity);
 `;
