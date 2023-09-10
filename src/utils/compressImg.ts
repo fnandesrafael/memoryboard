@@ -17,8 +17,8 @@ const compressImg = async (file: File): Promise<string> => {
         canvas.height = e.target.height * aspectRation;
 
         const context = canvas.getContext('2d');
-
         context.drawImage(img, 0, 0, canvas.width, canvas.height);
+
         resolve(context.canvas.toDataURL());
       };
     };
