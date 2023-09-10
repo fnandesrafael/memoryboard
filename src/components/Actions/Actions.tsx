@@ -10,7 +10,7 @@ type ActionsProps = {
   saveInLocal: () => void;
 };
 
-const TRANSITION = { type: 'spring', bounce: 0.45, duration: 0.6 };
+const TRANSITION = { type: 'spring', bounce: 0.35, duration: 0.6 };
 
 export default function Actions({ saveInLocal }: ActionsProps) {
   const [onToggle, setOnToggle] = useState(false);
