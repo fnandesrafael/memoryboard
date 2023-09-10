@@ -14,7 +14,6 @@ import * as S from './global.styles';
 function App() {
   const { polaroids } = usePolaroidStore();
   const { isVisible, position, handleOpening } = useContextMenu();
-
   const { saveInLocal } = useLocalStorage();
 
   return (
@@ -23,7 +22,7 @@ function App() {
 
       <S.SmokeElement
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.25 }}
+        animate={{ opacity: 0.2 }}
         transition={{ duration: 10, ease: 'easeInOut' }}
         src={smoke}
         alt=""
