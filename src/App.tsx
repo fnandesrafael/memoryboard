@@ -3,9 +3,9 @@ import usePolaroidStore from '@store/polaroidStore';
 import useLocalStorage from '@hooks/useLocalStorage';
 import useContextMenu from '@hooks/useContextMenu';
 import smoke from '@assets/gifs/smoke.gif';
-import { Actions } from '@components/Actions';
-import Dropzone from '@components/Dropzone';
+import Actions from '@components/Actions';
 import Modal from '@components/Modal';
+import Dropzone from '@components/Dropzone';
 import Polaroid from '@components/Polaroid';
 import ContextMenu from '@components/ContextMenu';
 
@@ -18,8 +18,6 @@ function App() {
 
   return (
     <S.AppWrapper>
-      <button onClick={saveInLocal}>Save</button>
-
       <S.SmokeElement
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.2 }}
@@ -28,9 +26,7 @@ function App() {
         alt=""
       />
 
-      <Actions.Root>
-        <Actions.Importer />
-      </Actions.Root>
+      <Actions saveInLocal={saveInLocal} />
 
       <Modal>
         <Dropzone />

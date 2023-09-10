@@ -5,10 +5,10 @@ export const Action = styled(motion.button)`
   background-color: #0a0a0a;
   border: none;
   border-radius: 100%;
-  height: 2.5rem;
+  height: 3rem;
   outline: none;
   transition: 0.2s background-color;
-  width: 2.5rem;
+  width: 3rem;
   z-index: 1000;
 
   &:hover {
@@ -19,7 +19,7 @@ export const Action = styled(motion.button)`
 
   svg,
   path {
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: #b0b3aa;
     stroke: #b0b3aa;
   }
@@ -29,11 +29,11 @@ export const Toggle = styled(motion.button)`
   background-color: #0a0a0a;
   border: none;
   border-radius: 100%;
-  height: 4rem;
+  height: 4.5rem;
   outline: none;
   padding: 1rem;
   transition: 0.2s background-color;
-  width: 4rem;
+  width: 4.5rem;
   z-index: calc(infinity);
 
   &:hover {
