@@ -45,6 +45,7 @@ export default function Actions({ saveInLocal, lightCandle }: ActionsProps) {
               onClick={() => lightCandle((prevState) => !prevState)}
             >
               <RiCandleFill />
+              <S.Tooltip $left="-3.5rem">Light</S.Tooltip>
             </S.Action>
 
             <S.Action
@@ -57,6 +58,7 @@ export default function Actions({ saveInLocal, lightCandle }: ActionsProps) {
               onClick={() => setIsImporting(true)}
             >
               <MdOutlineFileUpload />
+              <S.Tooltip $left="-4rem">Import</S.Tooltip>
             </S.Action>
 
             <S.Action
@@ -69,6 +71,7 @@ export default function Actions({ saveInLocal, lightCandle }: ActionsProps) {
               onClick={saveInLocal}
             >
               <MdSaveAs />
+              <S.Tooltip $left="-3.5rem">Save</S.Tooltip>
             </S.Action>
           </>
         )}
