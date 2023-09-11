@@ -65,7 +65,7 @@ export const Overall = createGlobalStyle`
 export const Candle = styled(motion.img)`
   bottom: -7rem;
   height: 24rem;
-  left: 0rem;
+  left: 0;
   mix-blend-mode: lighten;
   pointer-events: none;
   position: absolute;
