@@ -9,6 +9,7 @@ import * as S from './styles';
 
 type ActionsProps = {
   saveInLocal: () => void;
+  lightCandle: (prevState) => void;
 };
 
 const TRANSITION = {
@@ -17,7 +18,7 @@ const TRANSITION = {
   duration: 0.6,
 };
 
-export default function Actions({ saveInLocal }: ActionsProps) {
+export default function Actions({ saveInLocal, lightCandle }: ActionsProps) {
   const [onToggle, setOnToggle] = useState(false);
   const { setIsImporting } = useImportStore();
 
@@ -41,6 +42,7 @@ export default function Actions({ saveInLocal }: ActionsProps) {
               exit={{ scale: 0, opacity: 0 }}
               transition={TRANSITION}
               whileTap={{ scale: 0.8 }}
+              onClick={() => lightCandle((prevState) => !prevState)}
             >
               <RiCandleFill />
             </S.Action>

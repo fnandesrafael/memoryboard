@@ -62,11 +62,10 @@ export const Overall = createGlobalStyle`
   }
 `;
 
-export const SmokeElement = styled(motion.img)`
-  bottom: -12rem;
-  filter: saturate(0);
-  height: 52rem;
-  left: -56rem;
+export const Candle = styled(motion.img)`
+  bottom: -7rem;
+  height: 24rem;
+  left: 0rem;
   mix-blend-mode: lighten;
   pointer-events: none;
   position: absolute;
