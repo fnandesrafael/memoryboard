@@ -37,11 +37,9 @@ export default function Actions({ saveInLocal }: ActionsProps) {
             <S.Action
               key="light-btn"
               initial={{ scale: 0 }}
-              animate={{ scale: 1, transition: TRANSITION }}
-              exit={{
-                scale: 0,
-                transition: { ...TRANSITION, bounce: 0 },
-              }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0, opacity: 0 }}
+              transition={TRANSITION}
               whileTap={{ scale: 0.8 }}
             >
               <RiCandleFill />
@@ -50,11 +48,9 @@ export default function Actions({ saveInLocal }: ActionsProps) {
             <S.Action
               key="import-btn"
               initial={{ scale: 0 }}
-              animate={{ scale: 1, transition: TRANSITION }}
-              exit={{
-                scale: 0,
-                transition: { ...TRANSITION, bounce: 0 },
-              }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0, opacity: 0 }}
+              transition={TRANSITION}
               whileTap={{ scale: 0.8 }}
               onClick={() => setIsImporting(true)}
             >
@@ -64,11 +60,9 @@ export default function Actions({ saveInLocal }: ActionsProps) {
             <S.Action
               key="save-btn"
               initial={{ scale: 0 }}
-              animate={{ scale: 1, transition: TRANSITION }}
-              exit={{
-                scale: 0,
-                transition: { ...TRANSITION, bounce: 0 },
-              }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0, opacity: 0 }}
+              transition={TRANSITION}
               whileTap={{ scale: 0.8 }}
               onClick={saveInLocal}
             >
