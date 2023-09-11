@@ -66,6 +66,9 @@ export const Tooltip = styled(motion.p)<TooltipProps>`
   bottom: 0.5rem;
   color: #b3b0aa;
   display: flex;
+  font-family: Ubuntu, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
   left: ${({ $left }) => $left};
   padding: 0.5rem;
   position: absolute;

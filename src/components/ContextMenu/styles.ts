@@ -40,7 +40,8 @@ export const Option = styled(motion.div)<OptionProps>`
   }
 `;
 
-export const Text = styled.h5`
-  font-family: Nunitu, Ubuntu, sans-serif;
+export const Text = styled.p`
+  font-family: Ubuntu, sans-serif;
   font-size: 0.85rem;
+  font-weight: 500;
 `;
