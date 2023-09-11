@@ -50,6 +50,9 @@ export default function Polaroid({ data, handleContextMenu }: PolaroidProps) {
         y: data.position.y,
         zIndex: data.layer,
       }}
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      exit={{ scale: 0, transition: { duration: 0.1 } }}
       whileHover={{
         cursor: 'move',
         scale: 1.015,

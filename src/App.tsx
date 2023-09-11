@@ -1,4 +1,5 @@
 import React from 'react';
+import { AnimatePresence } from 'framer-motion';
 import usePolaroidStore from '@store/polaroidStore';
 import useLocalStorage from '@hooks/useLocalStorage';
 import useContextMenu from '@hooks/useContextMenu';
@@ -35,13 +36,15 @@ function App() {
       <S.Board>
         {isVisible && <ContextMenu position={position} />}
 
-        {polaroids.map((polaroid) => (
-          <Polaroid
-            key={polaroid.id}
-            data={polaroid}
-            handleContextMenu={handleOpening}
-          />
-        ))}
+        <AnimatePresence>
+          {polaroids.map((polaroid) => (
+            <Polaroid
+              key={polaroid.id}
+              data={polaroid}
+              handleContextMenu={handleOpening}
+            />
+          ))}
+        </AnimatePresence>
       </S.Board>
     </S.AppWrapper>
   );

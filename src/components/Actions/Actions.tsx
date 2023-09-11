@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { GrFormAdd } from 'react-icons/gr';
 import { MdOutlineFileUpload, MdSaveAs } from 'react-icons/md';
+import { RiCandleFill } from 'react-icons/ri';
 import useImportStore from '@store/importStore';
 
 import * as S from './styles';
@@ -29,10 +30,20 @@ export default function Actions({ saveInLocal }: ActionsProps) {
         {onToggle && (
           <>
             <S.Action
-              key="import-btn"
+              key="light-btn"
               initial={{ y: 70 }}
               animate={{ y: 0 }}
               exit={{ y: 70 }}
+              transition={TRANSITION}
+            >
+              <RiCandleFill />
+            </S.Action>
+
+            <S.Action
+              key="import-btn"
+              initial={{ y: 130 }}
+              animate={{ y: 0 }}
+              exit={{ y: 130 }}
               transition={TRANSITION}
               onClick={() => setIsImporting(true)}
             >
@@ -41,9 +52,9 @@ export default function Actions({ saveInLocal }: ActionsProps) {
 
             <S.Action
               key="save-btn"
-              initial={{ y: 130 }}
+              initial={{ y: 200 }}
               animate={{ y: 0 }}
-              exit={{ y: 130 }}
+              exit={{ y: 200 }}
               transition={TRANSITION}
               onClick={saveInLocal}
             >
