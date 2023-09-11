@@ -11,7 +11,11 @@ type ActionsProps = {
   saveInLocal: () => void;
 };
 
-const TRANSITION = { type: 'spring', bounce: 0.35, duration: 0.6 };
+const TRANSITION = {
+  type: 'spring',
+  bounce: 0.5,
+  duration: 0.6,
+};
 
 export default function Actions({ saveInLocal }: ActionsProps) {
   const [onToggle, setOnToggle] = useState(false);
@@ -21,30 +25,37 @@ export default function Actions({ saveInLocal }: ActionsProps) {
     <S.Wrapper>
       <S.Toggle
         whileHover={{ rotate: 270 }}
+        whileTap={{ scale: 1.25 }}
         onClick={() => setOnToggle((prevState) => !prevState)}
       >
         <GrFormAdd className="toggle-icon" />
       </S.Toggle>
 
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         {onToggle && (
           <>
             <S.Action
               key="light-btn"
-              initial={{ y: 70 }}
-              animate={{ y: 0 }}
-              exit={{ y: 70 }}
-              transition={TRANSITION}
+              initial={{ scale: 0 }}
+              animate={{ scale: 1, transition: TRANSITION }}
+              exit={{
+                scale: 0,
+                transition: { ...TRANSITION, bounce: 0 },
+              }}
+              whileTap={{ scale: 0.8 }}
             >
               <RiCandleFill />
             </S.Action>
 
             <S.Action
               key="import-btn"
-              initial={{ y: 130 }}
-              animate={{ y: 0 }}
-              exit={{ y: 130 }}
-              transition={TRANSITION}
+              initial={{ scale: 0 }}
+              animate={{ scale: 1, transition: TRANSITION }}
+              exit={{
+                scale: 0,
+                transition: { ...TRANSITION, bounce: 0 },
+              }}
+              whileTap={{ scale: 0.8 }}
               onClick={() => setIsImporting(true)}
             >
               <MdOutlineFileUpload />
@@ -52,10 +63,13 @@ export default function Actions({ saveInLocal }: ActionsProps) {
 
             <S.Action
               key="save-btn"
-              initial={{ y: 200 }}
-              animate={{ y: 0 }}
-              exit={{ y: 200 }}
-              transition={TRANSITION}
+              initial={{ scale: 0 }}
+              animate={{ scale: 1, transition: TRANSITION }}
+              exit={{
+                scale: 0,
+                transition: { ...TRANSITION, bounce: 0 },
+              }}
+              whileTap={{ scale: 0.8 }}
               onClick={saveInLocal}
             >
               <MdSaveAs />

@@ -3,7 +3,6 @@ import { AnimatePresence } from 'framer-motion';
 import usePolaroidStore from '@store/polaroidStore';
 import useLocalStorage from '@hooks/useLocalStorage';
 import useContextMenu from '@hooks/useContextMenu';
-import smoke from '@assets/gifs/smoke.gif';
 import Actions from '@components/Actions';
 import Modal from '@components/Modal';
 import Dropzone from '@components/Dropzone';
@@ -19,14 +18,6 @@ function App() {
 
   return (
     <S.AppWrapper>
-      <S.SmokeElement
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
-        transition={{ duration: 10, ease: 'easeInOut' }}
-        src={smoke}
-        alt=""
-      />
-
       <Actions saveInLocal={saveInLocal} />
 
       <Modal>
