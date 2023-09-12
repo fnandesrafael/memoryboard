@@ -40,13 +40,6 @@ export const Candle = styled(motion.img)`
   z-index: calc(infinity);
 `;
 
-export const Marquee = styled(motion.img)`
-  height: 82rem;
-  left: -32rem;
-  position: absolute;
-  top: 22vh;
-`;
-
 export const Overall = createGlobalStyle`
   * {
     margin: 0;
