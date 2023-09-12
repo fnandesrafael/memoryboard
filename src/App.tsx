@@ -61,7 +61,7 @@ function App() {
             animate={{ opacity: 1 }}
             whileInView={{
               rotate: -360,
-              transition: { duration: 30, repeate: Infinity, ease: 'linear' },
+              transition: { duration: 60, repeate: Infinity, ease: 'linear' },
             }}
             exit={{ opacity: 0 }}
             transition={{ duration: 2 }}

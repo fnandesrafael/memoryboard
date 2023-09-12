@@ -41,8 +41,8 @@ export const Candle = styled(motion.img)`
 `;
 
 export const Marquee = styled(motion.img)`
-  height: 64rem;
-  left: -22rem;
+  height: 82rem;
+  left: -32rem;
   position: absolute;
   top: 22vh;
 `;
