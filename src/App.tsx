@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import marquee from '@assets/svgs/marquee.svg';
 import usePolaroidStore from '@store/polaroidStore';
 import useLocalStorage from '@hooks/useLocalStorage';
 import useContextMenu from '@hooks/useContextMenu';
@@ -51,6 +52,22 @@ function App() {
           ))}
         </AnimatePresence>
       </S.Board>
+
+      <AnimatePresence>
+        {polaroids.length === 0 && (
+          <S.Marquee
+            src={marquee}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            whileInView={{
+              rotate: -360,
+              transition: { duration: 30, repeate: Infinity, ease: 'linear' },
+            }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 2 }}
+          />
+        )}
+      </AnimatePresence>
     </S.AppWrapper>
   );
 }

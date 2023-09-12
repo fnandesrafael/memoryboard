@@ -4,6 +4,7 @@ import grunge from '@assets/textures/grunge.png';
 import grid from '@assets/textures/grid.png';
 
 export const AppWrapper = styled.div`
+  display: flex;
   height: 100%;
   width: 100%;
 
@@ -27,6 +28,23 @@ export const Board = styled.main`
   display: flex;
   height: 100%;
   width: 100%;
+`;
+
+export const Candle = styled(motion.img)`
+  bottom: -7rem;
+  height: 24rem;
+  left: 4rem;
+  mix-blend-mode: lighten;
+  pointer-events: none;
+  position: absolute;
+  z-index: calc(infinity);
+`;
+
+export const Marquee = styled(motion.img)`
+  height: 64rem;
+  left: -22rem;
+  position: absolute;
+  top: 22vh;
 `;
 
 export const Overall = createGlobalStyle`
@@ -60,14 +78,4 @@ export const Overall = createGlobalStyle`
       z-index: 20;
     }
   }
-`;
-
-export const Candle = styled(motion.img)`
-  bottom: -7rem;
-  height: 24rem;
-  left: 0;
-  mix-blend-mode: lighten;
-  pointer-events: none;
-  position: absolute;
-  z-index: calc(infinity);
 `;
