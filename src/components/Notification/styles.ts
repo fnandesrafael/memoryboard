@@ -23,7 +23,7 @@ export const Container = styled(motion.div)`
 export const Icon = styled.div`
   svg {
     color: #4ade80;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 `;
 
