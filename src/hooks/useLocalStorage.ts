@@ -1,11 +1,18 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import usePolaroidStore from '@store/polaroidStore';
 
 const useLocalStorage = () => {
+  const [hasSaved, setHasSaved] = useState(false);
   const { polaroids, setPolaroids } = usePolaroidStore();
 
   const saveInLocal = () => {
     localStorage.setItem('polaroids', JSON.stringify(polaroids));
+
+    setHasSaved(true);
+
+    setTimeout(() => {
+      setHasSaved(false);
+    }, 2000);
   };
 
   useEffect(() => {
@@ -14,7 +21,7 @@ const useLocalStorage = () => {
     setPolaroids(recoveredData);
   }, [setPolaroids]);
 
-  return { saveInLocal };
+  return { hasSaved, saveInLocal };
 };
 
 export default useLocalStorage;
