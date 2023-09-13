@@ -4,6 +4,7 @@ import grunge from '@assets/textures/grunge.png';
 import grid from '@assets/textures/grid.png';
 
 export const AppWrapper = styled.div`
+  display: flex;
   height: 100%;
   width: 100%;
 
@@ -29,6 +30,16 @@ export const Board = styled.main`
   width: 100%;
 `;
 
+export const Candle = styled(motion.img)`
+  bottom: -7rem;
+  height: 24rem;
+  left: 4rem;
+  mix-blend-mode: lighten;
+  pointer-events: none;
+  position: absolute;
+  z-index: calc(infinity);
+`;
+
 export const Overall = createGlobalStyle`
   * {
     margin: 0;
@@ -51,22 +62,13 @@ export const Overall = createGlobalStyle`
       height: 100%;
       left: 0;
       mix-blend-mode: luminosity;
-      opacity: 0.5;
+      opacity: 0.75;
       pointer-events: none;
       position: fixed;
       top: 0;
+      transform: rotate(180deg);
       width: 100%;
       z-index: 20;
     }
   }
-`;
-
-export const SmokeElement = styled(motion.img)`
-  bottom: -20rem;
-  height: 120rem;
-  left: -48rem;
-  mix-blend-mode: lighten;
-  pointer-events: none;
-  position: absolute;
-  z-index: calc(infinity);
 `;

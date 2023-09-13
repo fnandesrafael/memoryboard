@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
+import { AiOutlineLoading } from 'react-icons/ai';
 import { MdOutlineFileUpload } from 'react-icons/md';
 import { v4 as uuid } from 'uuid';
 import usePolaroidStore from '@store/polaroidStore';
@@ -8,6 +9,7 @@ import compressImg from '@utils/compressImg';
 import * as S from './styles';
 
 export default function Dropzone() {
+  const [isLoading, setIsLoading] = useState(false);
   const { addPolaroids } = usePolaroidStore();
   const { acceptedFiles, getRootProps, getInputProps, isDragActive } =
     useDropzone({
@@ -29,32 +31,41 @@ export default function Dropzone() {
         };
       });
 
+      setIsLoading(true);
+
       addPolaroids(await Promise.all(response));
+
+      setIsLoading(false);
     };
 
     handleUploads();
   }, [acceptedFiles, addPolaroids]);
 
-  // useEffect(() => {
-  //   const handleUploads = async () => {
-  //     const response = acceptedFiles.map(async (file) => {
-  //       return compressImg(file);
-  //     });
-  //     const result = await Promise.all(response);
-
-  //     console.log(result);
-  //   };
-
-  //   handleUploads();
-  // }, [acceptedFiles]);
-
   return (
-    <S.Container {...getRootProps()} $isDragActive={isDragActive}>
-      <input {...getInputProps()} />
+    <>
+      {isLoading ? (
+        <S.Loading
+          whileInView={{
+            rotate: 360,
+            transition: {
+              duration: 1,
+              repeat: Infinity,
+              repeatType: 'loop',
+              ease: 'linear',
+            },
+          }}
+        >
+          <AiOutlineLoading />
+        </S.Loading>
+      ) : (
+        <S.Container {...getRootProps()} $isDragActive={isDragActive}>
+          <input {...getInputProps()} />
 
-      <MdOutlineFileUpload />
-      <S.Heading>Import your images</S.Heading>
-      <S.Paragraph>Click or drag to upload them</S.Paragraph>
-    </S.Container>
+          <MdOutlineFileUpload />
+          <S.Heading>Import your images</S.Heading>
+          <S.Paragraph>Click or drag to upload them</S.Paragraph>
+        </S.Container>
+      )}
+    </>
   );
 }

@@ -37,6 +37,13 @@ export const Heading = styled(motion.h1)`
   margin-top: 1rem;
 `;
 
+export const Loading = styled(motion.div)`
+  display: flex;
+  flex-flow: column;
+  font-size: 2rem;
+  justify-content: center;
+`;
+
 export const Paragraph = styled(motion.p)`
   color: #b3b0aa;
   font-family: Nunito, Ubuntu, sans-serif;
