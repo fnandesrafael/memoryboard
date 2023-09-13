@@ -10,7 +10,7 @@ import * as S from './styles';
 
 export default function Dropzone() {
   const [isLoading, setIsLoading] = useState(false);
-  const { polaroids, addPolaroids } = usePolaroidStore();
+  const { addPolaroids } = usePolaroidStore();
   const { acceptedFiles, getRootProps, getInputProps, isDragActive } =
     useDropzone({
       accept: { 'image/*': [] },
@@ -18,7 +18,7 @@ export default function Dropzone() {
 
   useEffect(() => {
     const handleUploads = async () => {
-      const response = acceptedFiles.map(async (file) => {
+      const response = acceptedFiles.map(async (file, index) => {
         return {
           id: uuid(),
           file: await compressImg(file),
@@ -27,7 +27,7 @@ export default function Dropzone() {
             x: Math.floor(Math.random() * 101) + 450,
             y: Math.floor(Math.random() * 101) + 100,
           },
-          layer: Math.max(...polaroids.map((polaroid) => polaroid.layer)) + 1,
+          layer: 40 + index,
         };
       });
 
