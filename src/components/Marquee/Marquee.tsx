@@ -9,6 +9,7 @@ const motionValues = {
   },
   exit: {
     opacity: 0,
+    transition: { duration: 3, ease: 'easeInOut' },
   },
   transition: { delay: 0.8, duration: 3, ease: 'easeInOut' },
 };
