@@ -35,19 +35,6 @@ export default function Dropzone() {
     handleUploads();
   }, [acceptedFiles, addPolaroids]);
 
-  // useEffect(() => {
-  //   const handleUploads = async () => {
-  //     const response = acceptedFiles.map(async (file) => {
-  //       return compressImg(file);
-  //     });
-  //     const result = await Promise.all(response);
-
-  //     console.log(result);
-  //   };
-
-  //   handleUploads();
-  // }, [acceptedFiles]);
-
   return (
     <S.Container {...getRootProps()} $isDragActive={isDragActive}>
       <input {...getInputProps()} />
