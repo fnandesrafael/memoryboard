@@ -8,22 +8,24 @@ type SliderProps = {
 export const Slider = styled(motion.div)<SliderProps>`
   animation: ${({ $mirrorSlide }) =>
     $mirrorSlide
-      ? '30s slideToRight infinite linear'
-      : '30s slideToLeft infinite linear'};
+      ? '30s slide-to-right infinite linear'
+      : '30s slide-to-left infinite linear'};
 
-  @keyframes slideToLeft {
+  @keyframes slide-to-left {
     from {
       transform: translateX(0);
     }
+
     to {
       transform: translateX(-100%);
     }
   }
 
-  @keyframes slideToRight {
+  @keyframes slide-to-right {
     from {
       transform: translateX(-100%);
     }
+
     to {
       transform: translateX(0);
     }
@@ -48,6 +50,6 @@ export const Wrapper = styled.div`
   height: 100%;
   justify-content: center;
   position: absolute;
-  width: 100%;
   white-space: nowrap;
+  width: 100%;
 `;
