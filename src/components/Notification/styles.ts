@@ -15,7 +15,7 @@ export const Container = styled(motion.div)`
   left: 43%;
   padding: 0.75rem 1.5rem;
   position: absolute;
-  top: 1rem;
+  top: 2rem;
   width: 8rem;
   z-index: calc(infinity);
 `;

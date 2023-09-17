@@ -1,7 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import { motion } from 'framer-motion';
-import grunge from '@assets/textures/grunge.png';
-import grid from '@assets/textures/grid.png';
+import grid from '@assets/images/grid.png';
+import grunge from '@assets/images/grunge.png';
 
 export const AppWrapper = styled.div`
   display: flex;
@@ -62,7 +62,7 @@ export const Overall = createGlobalStyle`
       height: 100%;
       left: 0;
       mix-blend-mode: luminosity;
-      opacity: 0.75;
+      opacity: 0.25;
       pointer-events: none;
       position: fixed;
       top: 0;
