@@ -18,11 +18,8 @@ Este projeto é desenvolvido como parte de um esforço para aprimorar minhas hab
 - [Sumário](#sumário)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Produção](#produção)
-- [Principais Features]()
-  - [Lorem Ipsum]()
-  - [Lorem Ipsum]()
-  - [Lorem Ipsum]()
-- [Instalação]()
+- [Principais Features](#principais-features)
+  - [Componente de Dropzone](#componente-de-dropzone)
 
 ## Tecnologias Utilizadas
 <div style="display: flex; gap: 2px;">
@@ -58,3 +55,17 @@ Este projeto é desenvolvido como parte de um esforço para aprimorar minhas hab
 
 ## Produção
 Essa aplicação está disponível em ambiente de produção, pela **[Vercel](https://vercel.com/)**, através do link: [memoryboardio.vercel.app](https://memoryboardio.vercel.app)
+
+## Principais Features
+
+### Componente de Dropzone
+A principal feature dessa aplicação é sem dúvidas a capacidade do usuário realizar o envio de suas memórias, ou seja, seus arquivos de imagem.
+
+Ele pode fazê-lo de duas maneiras, arrastando as imagens para o menu de importação, ou simplesmente clicando no mesmo menu.
+
+<div style="display: flex;flex-flow: column; gap: 5px">
+  <img src="./src/assets/images/docs/dropzone_pov_action.png" alt="Dropzone Preview Importer Action">
+  <img src="./src/assets/images/docs/dropzone_pov_modal.png" alt="Dropzone Preview Importer Modal">
+</div>
+
+Isso tudo é possível graças a biblioteca **[React Dropzone](https://react-dropzone.js.org/)**, que facilita a implementação do `<input />` responsável por realizar o upload dos arquivos.
