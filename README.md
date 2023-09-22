@@ -16,31 +16,31 @@ Este projeto é desenvolvido como parte de um esforço para aprimorar minhas hab
 ## Tecnologias Utilizadas
 
 <div style="display: flex; gap: 2px;">
-  <a href="https://www.typescriptlang.org/">
+  <a href="https://www.typescriptlang.org/" style="text-decoration: none">
     <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
   </a>
 
-  <a href="https://react.dev">
+  <a href="https://react.dev" style="text-decoration: none">
     <img src="https://img.shields.io/badge/React-131313?style=for-the-badge&logo=react&logoColor=cyan" alt="React">
   </a>
 
-  <a href="https://react-dropzone.js.org/">
+  <a href="https://react-dropzone.js.org/" style="text-decoration: none">
     <img src="https://img.shields.io/badge/React_Dropzone-131313?style=for-the-badge&logo=react&logoColor=cyan" alt="React Dropzone">
   </a>
 
-  <a href="https://react-icons.github.io/react-icons/">
+  <a href="https://react-icons.github.io/react-icons/" style="text-decoration: none">
     <img src="https://img.shields.io/badge/React_Icons-131313?style=for-the-badge&logo=react&logoColor=eb4e63" alt="React Icons">
   </a>
 
-  <a href="https://docs.pmnd.rs/zustand/getting-started/introduction">
+  <a href="https://docs.pmnd.rs/zustand/getting-started/introduction" style="text-decoration: none">
     <img src="https://img.shields.io/badge/Zustand-efefef?style=for-the-badge&logo=zustand&logoColor=e229c4" alt="Zustand">
   </a>
 
-  <a href="https://styled-components.com/">
+  <a href="https://styled-components.com/" style="text-decoration: none">
     <img src="https://img.shields.io/badge/Styled_Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" alt="Styled Components">
   </a>
 
-  <a href="https://www.framer.com/motion/">
+  <a href="https://www.framer.com/motion/" style="text-decoration: none">
     <img src="https://img.shields.io/badge/Framer_Motion-efefef?style=for-the-badge&logo=framer&logoColor=e229c4" alt="Framer Motion">
   </a>
 </div>
