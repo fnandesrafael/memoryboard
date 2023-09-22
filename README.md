@@ -15,38 +15,39 @@ Este projeto é desenvolvido como parte de um esforço para aprimorar minhas hab
 
 ## Tecnologias Utilizadas
 
+<div style="display: flex; gap: 2px">
+  <a href="https://www.typescriptlang.org/">
 
-<link href="https://www.typescriptlang.org/">
+  ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+  </a>
 
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-</link>
+  <a href="https://react.dev">
 
-<link href="https://www.typescriptlang.org/">
+  ![React](https://img.shields.io/badge/React-131313?style=for-the-badge&logo=react&logoColor=cian)
+  </a>
 
-![React](https://img.shields.io/badge/React-131313?style=for-the-badge&logo=react&logoColor=cian)
-</link>
+  <a href="https://react-dropzone.js.org/">
 
-<link href="https://react-dropzone.js.org/">
+  ![React Dropzone](https://img.shields.io/badge/React_Dropzone-131313?style=for-the-badge&logo=react&logoColor=cian)
+  </a>
 
-![React Dropzone](https://img.shields.io/badge/React_Dropzone-131313?style=for-the-badge&logo=react&logoColor=cian)
-</link>
+  <a href="https://react-icons.github.io/react-icons/">
 
-<link href="https://react-icons.github.io/react-icons/">
+  ![React Icons](https://img.shields.io/badge/React_Icons-131313?style=for-the-badge&logo=react&logoColor=eb4e63)
+  </a>
 
-![React Icons](https://img.shields.io/badge/React_Icons-131313?style=for-the-badge&logo=react&logoColor=eb4e63)
-</link>
+  <a href="https://docs.pmnd.rs/zustand/getting-started/introduction">
 
-<link href="https://docs.pmnd.rs/zustand/getting-started/introduction">
+  ![Zustand](https://img.shields.io/badge/Zustand-efefef?style=for-the-badge&logo=zustand&logoColor=e229c4)
+  </a>
 
-![Zustand](https://img.shields.io/badge/Zustand-efefef?style=for-the-badge&logo=zustand&logoColor=e229c4)
-</link>
+  <a href="https://styled-components.com/">
 
-<link href="https://styled-components.com/">
+  ![Styled Components](https://img.shields.io/badge/Styled_Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
+  </a>
 
-![Styled Components](https://img.shields.io/badge/Styled_Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
-</link>
+  <a href="https://www.framer.com/motion/">
 
-<link href="https://www.framer.com/motion/">
-
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-efefef?style=for-the-badge&logo=framer&logoColor=e229c4)
-</link>
+  ![Framer Motion](https://img.shields.io/badge/Framer_Motion-efefef?style=for-the-badge&logo=framer&logoColor=e229c4)
+  </a>
+</div>
