@@ -1,7 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import { motion } from 'framer-motion';
 import grid from '@assets/images/grid.png';
-import grunge from '@assets/images/grunge.png';
 
 export const AppWrapper = styled.div`
   display: flex;
@@ -54,21 +53,5 @@ export const Overall = createGlobalStyle`
     background-color: #131313;
     color: #B3B0AA;
     overflow: hidden;
-
-    &::after {
-      background-image: ${`url(${grunge})`};
-      background-size: cover;
-      content: '';
-      height: 100%;
-      left: 0;
-      mix-blend-mode: luminosity;
-      opacity: 0.25;
-      pointer-events: none;
-      position: fixed;
-      top: 0;
-      transform: rotate(180deg);
-      width: 100%;
-      z-index: 20;
-    }
   }
 `;
