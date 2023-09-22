@@ -14,13 +14,17 @@ Seu objetivo principal é fornecer aos usuários uma plataforma digital onde ele
 Este projeto é desenvolvido como parte de um esforço para aprimorar minhas habilidades de desenvolvimento frontend e serve como um exemplo prático das tecnologias e técnicas que domino. É também uma expressão do meu apreço pela nostalgia e pelo poder da memória e portanto da história em nossa vida cotidiana.
 
 ## Sumário
-
 - [Visão Geral](#visão-geral)
 - [Sumário](#sumário)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Produção](#produção)
+- [Principais Features]()
+  - [Lorem Ipsum]()
+  - [Lorem Ipsum]()
+  - [Lorem Ipsum]()
+- [Instalação]()
 
 ## Tecnologias Utilizadas
-
 <div style="display: flex; gap: 2px;">
   <a href="https://www.typescriptlang.org/">
     <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
@@ -50,3 +54,7 @@ Este projeto é desenvolvido como parte de um esforço para aprimorar minhas hab
     <img src="https://img.shields.io/badge/Framer_Motion-efefef?style=for-the-badge&logo=framer&logoColor=e229c4" alt="Framer Motion">
   </a>
 </div>
+
+
+## Produção
+Essa aplicação está disponível em ambiente de produção, pela **[Vercel](https://vercel.com/)**, através do link: [memoryboardio.vercel.app](https://memoryboardio.vercel.app)
