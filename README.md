@@ -15,39 +15,32 @@ Este projeto é desenvolvido como parte de um esforço para aprimorar minhas hab
 
 ## Tecnologias Utilizadas
 
-<div style="display: flex; gap: 2px">
+<div style="display: flex; gap: 2px;">
   <a href="https://www.typescriptlang.org/">
-
-  ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
   </a>
 
   <a href="https://react.dev">
-
-  ![React](https://img.shields.io/badge/React-131313?style=for-the-badge&logo=react&logoColor=cian)
+    <img src="https://img.shields.io/badge/React-131313?style=for-the-badge&logo=react&logoColor=cyan" alt="React">
   </a>
 
   <a href="https://react-dropzone.js.org/">
-
-  ![React Dropzone](https://img.shields.io/badge/React_Dropzone-131313?style=for-the-badge&logo=react&logoColor=cian)
+    <img src="https://img.shields.io/badge/React_Dropzone-131313?style=for-the-badge&logo=react&logoColor=cyan" alt="React Dropzone">
   </a>
 
   <a href="https://react-icons.github.io/react-icons/">
-
-  ![React Icons](https://img.shields.io/badge/React_Icons-131313?style=for-the-badge&logo=react&logoColor=eb4e63)
+    <img src="https://img.shields.io/badge/React_Icons-131313?style=for-the-badge&logo=react&logoColor=eb4e63" alt="React Icons">
   </a>
 
   <a href="https://docs.pmnd.rs/zustand/getting-started/introduction">
-
-  ![Zustand](https://img.shields.io/badge/Zustand-efefef?style=for-the-badge&logo=zustand&logoColor=e229c4)
+    <img src="https://img.shields.io/badge/Zustand-efefef?style=for-the-badge&logo=zustand&logoColor=e229c4" alt="Zustand">
   </a>
 
   <a href="https://styled-components.com/">
-
-  ![Styled Components](https://img.shields.io/badge/Styled_Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
+    <img src="https://img.shields.io/badge/Styled_Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" alt="Styled Components">
   </a>
 
   <a href="https://www.framer.com/motion/">
-
-  ![Framer Motion](https://img.shields.io/badge/Framer_Motion-efefef?style=for-the-badge&logo=framer&logoColor=e229c4)
+    <img src="https://img.shields.io/badge/Framer_Motion-efefef?style=for-the-badge&logo=framer&logoColor=e229c4" alt="Framer Motion">
   </a>
 </div>
