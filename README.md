@@ -207,7 +207,30 @@ npm run dev
 
 ## Arquitetura do Software
 
-Lorem Ipsum
+```cli
+src/
+├── assets/
+│   └── images/
+│       ├── (arquivos de imagens aqui)
+│
+├── components/
+│   ├── (componentes React aqui)
+│
+├── constants/
+│   ├── animations/
+│   │   ├── (arquivos de animações aqui)
+│
+├── hooks/
+│   ├── (hooks personalizados aqui)
+│
+├── store/
+│   ├── (gerenciamento de estado global aqui)
+│
+└── utils/
+    ├── (funções utilitárias aqui)
+```
+
+Fora do diretório `src`, encontram-se apenas arquivos de configuração, módulos, documentações etc.
 
 ## Créditos e Direitos Autorais
 
