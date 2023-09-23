@@ -155,7 +155,23 @@ Assim fora desenvolvido um *Context Menu* personalizado. Ao clicar com o botão 
 
 ### 5. Persistência de Dados em LocalStorage
 
-Lorem Ipsum
+Com os dados das imagens, facilmente manipuláveis, agora como uma string `base64`. É muito simples persistir esses dados em sessões de *LocalStorage*.
+
+Para isso, foi desenvolvido um custom hook, chamado `useLocalStorage`, que salva não somente as imagens na chave `file` de cada `PolaroidObject`, mas também todas suas outras chaves como também sua `position`. Bastando um clique no botão de salvar.
+
+<div style="display: flex;flex-flow: column; gap: 5px">
+  <img style="width: 100%" src="./src/assets/images/docs/local_storage_code_block.png">
+
+  > Custom hook useLocalStorage.
+
+  <img style="width: 100%" src="./src/assets/images/docs/save_pov_action.png">
+
+  > Action responsável por persistir os dados.
+
+  <img style="width: 100%" src="./src/assets/images/docs/save_pov_notification.png">
+
+  > UI do componente Notification, demonstrando que a persistência dos dados foi realizada com sucesso.
+</div>
 
 ## Instalação e Execução Local
 
