@@ -173,9 +173,37 @@ Para isso, foi desenvolvido um custom hook, chamado `useLocalStorage`, que salva
   > UI do componente Notification, demonstrando que a persistência dos dados foi realizada com sucesso.
 </div>
 
-## Instalação e Execução Local
+## Instalação e Execução em Ambiente de Desenvolvimento
 
-Lorem Ipsum
+Para aqueles que queiram executar a aplicação localmente, é possível fazê-lo em simples passos:
+
+1. Clone o projeto em sua máquina:
+
+```cli
+git clone git@github.com:fnandesrafael/memoryboard.git
+```
+
+2. Acesse o diretório raiz do projeto:
+
+```cli
+cd memoryboard
+```
+
+3. Instale as dependências, utilizando seu gerenciador de pacotes Node.js, como `npm`, `yarn`, `pnpm` etc.
+
+```cli
+npm install
+```
+> ou mesmo a versão encurtada, `npm i`
+
+4. Execute o comando node para iniciar a aplicação no servidor *LocalHost*.
+
+```cli
+npm run dev
+```
+> Após executá-lo, basta acessar o endereço `https://localhost:3000` em seu navegador.
+
+É importante perceber que para que todos esses comandos sejam possíveis, a sua máquina deve possuir as dependências necessárias, nesse caso o **Git**, para a clonagem do repositório remoto em sua máquina local, além do **Node.js** e do **Npm**(ou outro gerenciador de pacotes node), para sua instalação e execução dos comandos.
 
 ## Arquitetura do Software
 
