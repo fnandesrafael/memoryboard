@@ -66,12 +66,26 @@ Ele pode fazê-lo de duas maneiras, arrastando as imagens para o menu de importa
 <div style="display: flex;flex-flow: column; gap: 5px">
   <img src="./src/assets/images/docs/dropzone_pov_action.png" alt="Dropzone Preview Importer Action">
 
-  > Preview do Botão Responsável Pela Operação de Importação.
+  > Preview do botão responsável pela operação de importação.
 
   <img src="./src/assets/images/docs/dropzone_pov_modal.png" alt="Dropzone Preview Importer Modal">
 
-  > Preview do Modal de Importação.
+  > Preview do modal de importação.
 </div>
 
 #####
-Isso tudo é possível graças a biblioteca **[React Dropzone](https://react-dropzone.js.org/)**, que facilita a implementação do `<input />` responsável por realizar o upload dos arquivos.
+Isso tudo é possível graças ao framework **[React Dropzone](https://react-dropzone.js.org/)**, que facilita a implementação do `<input />` responsável por realizar o upload dos arquivos.
+
+Essa implementação em código fica assim:
+
+<div style="display: flex;flex-flow: column; gap: 5px">
+
+  <img style="width: 100%" src="./src/assets/images/docs/dropzone_code_hook.png">
+
+
+  > Bloco de código jsx que desestrutura alguns dos objetos retornados pelo custom hook useDropzone, que serão utilizados no jsx e em outras funções.
+
+ <img style="width: 100%" src="./src/assets/images/docs/dropzone_code_jsx.png">
+
+  > Bloco de código jsx utilizando os objetos retornados pelo método getRootProps() e getInputProps() do custom hook useDropzone.
+</div>
