@@ -21,11 +21,17 @@ Este projeto é desenvolvido como parte de um esforço para aprimorar minhas hab
 - [Principais Features](#principais-features)
   - [1. Componente de Dropzone](#1-componente-de-dropzone)
   - [2. State Management com Zustand](#2-state-management-com-zustand)
+  - [3. Compressão de Imagens e Conversão para Base64](#3-compressão-de-imagens-e-conversão-para-base64)
+  - [4. Context Menu Customizado](#4-context-menu-customizado)
+  - [5. Persistência de Dados em LocalStorage](#5-persistência-de-dados-em-localstorage)
+- [Instalação e Execução Local](#instalação-e-execução-local)
+- [Arquitetura do Software](#arquitetura-do-software)
+- [Créditos e Direitos Autorais](#créditos-e-direitos-autorais)
 
 ## Produção
 Essa aplicação está disponível em ambiente de produção, pela **[Vercel](https://vercel.com/)**, através do link abaixo:
 
-<a href="https://memoryboardio.vercel.app" target="_blank" style="font-size: 2rem">
+<a href="https://memoryboardio.vercel.app" target="_blank" style="font-size: 32px">
   memoryboardio.vercel.app
 </a>
 
@@ -119,3 +125,46 @@ Assim, utilizando uma *Handler Function*, os arquivos importados, salvos no arra
 </div>
 
 Isso faz com que o anterior array de `Files`(`acceptedFiles`), retornado pelo hook `useDropzone`, seja mapeado como um novo array do tipo `PolaroidObject`, apresentado no bloco de código da `polaroidStore` agora com novas informações.
+
+
+### 3. Compressão de Imagens e Conversão para Base64
+
+Dentre as informações salvas no tipo `PolaroidObject`, encontrasse a chave `file`. Inicialmente, esse valor guardava o proprio objeto `File`, padrão do JavaScript para lidar com arquivos enviados. No entanto isso faria com que a aplicação começasse a perder performance considerávelmente. Primeiro porque o próprio tipo File, apesar de ser um objeto é um classe dificil de se lidar, por exemplo, não é possível enviá-la ao *LocalStorage* como json e recuperá-la, esse valor acaba se "corrompendo" no meio do processo. E também para que a mesma seja renderizada, teria de ser convertida em em uma Uri.
+
+Além disso, o tamanho das imagens não estão sob o controle da aplicação, ou seja, em teoria o usuário pode enviar uma imagem de qualquer tamanho, e quanto maior a mesma fosse, mais performance a aplicação perderia.
+
+Por isso, na função `handleUploads` previamente exposta, cada `File` dentro do array`acceptedFiles`, não é somente salvo no novo objeto `PolaroidObject`, como também é antes comprimido e convertido numa string `base64`.
+
+<div style="display: flex;flex-flow: column; gap: 5px">
+  <img style="width: 100%" src="./src/assets/images/docs/utils_compress_img.png">
+
+  > Função "compressImg".
+</div>
+
+### 4. Context Menu Customizado
+
+Depois que as imagens são importadas, e seus valores mapeados como componentes `Polaroid`, podem ser facilmente movidas com o atributo `drag` do framework **Framer Motion**. Mas não basta apenas movê-las pela tela, é necessário melhor organizá-las, e para isso, funcionalidades como: **trazer para frente**, **enviar para trás** e **apagar**, são imprescindíveis.
+
+Assim fora desenvolvido um *Context Menu* personalizado. Ao clicar com o botão direito em uma imagem, ela é salva na *PolaroidStore* como `targetedPolaroid`, e assim seus dados são usados para manipular o array `polaroids`.
+
+<div style="display: flex;flex-flow: column; gap: 5px">
+  <img style="width: 100%" src="./src/assets/images/docs/context_menu_pov.png">
+
+  > UI do componente ContextMenu ao clicar com o botão direito sobre um componente Polaroid.
+</div>
+
+### 5. Persistência de Dados em LocalStorage
+
+Lorem Ipsum
+
+## Instalação e Execução Local
+
+Lorem Ipsum
+
+## Arquitetura do Software
+
+Lorem Ipsum
+
+## Créditos e Direitos Autorais
+
+Lorem Ipsum
