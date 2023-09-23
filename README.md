@@ -19,13 +19,15 @@ Este projeto é desenvolvido como parte de um esforço para aprimorar minhas hab
 - [Produção](#produção)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Principais Features](#principais-features)
-  - [1. Componente de Dropzone](#1-componente-de-dropzonecomponente-de-dropzone)
+  - [1. Componente de Dropzone](#1-componente-de-dropzone)
   - [2. State Management com Zustand](#2-state-management-com-zustand)
 
 ## Produção
 Essa aplicação está disponível em ambiente de produção, pela **[Vercel](https://vercel.com/)**, através do link abaixo:
 
-### [memoryboardio.vercel.app](https://memoryboardio.vercel.app)
+<a href="https://memoryboardio.vercel.app" target="_blank" style="font-size: 2rem">
+  memoryboardio.vercel.app
+</a>
 
 ## Tecnologias Utilizadas
 <div style="display: flex; gap: 2px;">
@@ -92,7 +94,7 @@ Essa implementação em código fica assim:
   > Bloco de código jsx utilizando os objetos retornados pelo método getRootProps() e getInputProps() do custom hook useDropzone.
 </div>
 
-## 2. State Management com Zustand
+### 2. State Management com Zustand
 
 Após as imagens serem importadas, é necessário lidar com elas, para que possam ser acessadas por outros componentes.
 
