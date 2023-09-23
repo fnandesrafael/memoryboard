@@ -1,7 +1,7 @@
 # Memory Board
 
 ## Visão Geral
-Essa é uma aplicação front-end que reimagina o conceito tradicional de *"Memory Board"* em um ambiente digital. Originalmente, um Memory Board é uma ferramenta física usada para organizar e exibir memórias visuais, como fotos, cartões postais e lembranças. Ele serve como um lembrete tangível de momentos especiais, experiências significativas ou mesmo personalidades importantes na vida de alguém.
+Essa é uma aplicação frontend que reimagina o conceito tradicional de *"Memory Board"* em um ambiente digital. Originalmente, um Memory Board é uma ferramenta física usada para organizar e exibir memórias visuais, como fotos, cartões postais e lembranças. Ele serve como um lembrete tangível de momentos especiais, experiências significativas ou mesmo personalidades importantes na vida de alguém.
 
 Seu objetivo principal é fornecer aos usuários uma plataforma digital onde eles possam:
 
@@ -16,10 +16,15 @@ Este projeto é desenvolvido como parte de um esforço para aprimorar minhas hab
 ## Sumário
 - [Visão Geral](#visão-geral)
 - [Sumário](#sumário)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Produção](#produção)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Principais Features](#principais-features)
   - [Componente de Dropzone](#componente-de-dropzone)
+
+## Produção
+Essa aplicação está disponível em ambiente de produção, pela **[Vercel](https://vercel.com/)**, através do link abaixo:
+
+### [memoryboardio.vercel.app](https://memoryboardio.vercel.app)
 
 ## Tecnologias Utilizadas
 <div style="display: flex; gap: 2px;">
@@ -51,10 +56,6 @@ Este projeto é desenvolvido como parte de um esforço para aprimorar minhas hab
     <img src="https://img.shields.io/badge/Framer_Motion-efefef?style=for-the-badge&logo=framer&logoColor=e229c4" alt="Framer Motion">
   </a>
 </div>
-
-
-## Produção
-Essa aplicação está disponível em ambiente de produção, pela **[Vercel](https://vercel.com/)**, através do link: [memoryboardio.vercel.app](https://memoryboardio.vercel.app)
 
 ## Principais Features
 
