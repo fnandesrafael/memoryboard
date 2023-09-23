@@ -24,7 +24,7 @@ Este projeto é desenvolvido como parte de um esforço para aprimorar minhas hab
   - [3. Compressão de Imagens e Conversão para Base64](#3-compressão-de-imagens-e-conversão-para-base64)
   - [4. Context Menu Customizado](#4-context-menu-customizado)
   - [5. Persistência de Dados em LocalStorage](#5-persistência-de-dados-em-localstorage)
-- [Instalação e Execução Local](#instalação-e-execução-local)
+- [Instalação e Execução em Ambiente de Desenvolvimento](#instalação-e-execução-em-ambiente-de-desenvolvimento)
 - [Arquitetura do Software](#arquitetura-do-software)
 - [Créditos e Direitos Autorais](#créditos-e-direitos-autorais)
 
