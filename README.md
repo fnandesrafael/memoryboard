@@ -19,8 +19,8 @@ Este projeto é desenvolvido como parte de um esforço para aprimorar minhas hab
 - [Produção](#produção)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Principais Features](#principais-features)
-  - [Componente de Dropzone](#componente-de-dropzone)
-  - [State Management com Zustand](#2-state-management-com-zustand)
+  - [1. Componente de Dropzone](#1-componente-de-dropzonecomponente-de-dropzone)
+  - [2. State Management com Zustand](#2-state-management-com-zustand)
 
 ## Produção
 Essa aplicação está disponível em ambiente de produção, pela **[Vercel](https://vercel.com/)**, através do link abaixo:
