@@ -20,6 +20,7 @@ Este projeto é desenvolvido como parte de um esforço para aprimorar minhas hab
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Principais Features](#principais-features)
   - [Componente de Dropzone](#componente-de-dropzone)
+  - [State Management com Zustand](#2-state-management-com-zustand)
 
 ## Produção
 Essa aplicação está disponível em ambiente de produção, pela **[Vercel](https://vercel.com/)**, através do link abaixo:
@@ -59,7 +60,7 @@ Essa aplicação está disponível em ambiente de produção, pela **[Vercel](ht
 
 ## Principais Features
 
-### Componente de Dropzone
+### 1. Componente de Dropzone
 A principal feature dessa aplicação é sem dúvidas a capacidade do usuário realizar o envio de suas memórias, ou seja, seus arquivos de imagem.
 
 Ele pode fazê-lo de duas maneiras, arrastando as imagens para o menu de importação, ou simplesmente clicando no mesmo menu.
@@ -90,3 +91,29 @@ Essa implementação em código fica assim:
 
   > Bloco de código jsx utilizando os objetos retornados pelo método getRootProps() e getInputProps() do custom hook useDropzone.
 </div>
+
+## 2. State Management com Zustand
+
+Após as imagens serem importadas, é necessário lidar com elas, para que possam ser acessadas por outros componentes.
+
+Para tal, fora utilizado o framework **Zustand**, criando algumas *Stores*, dentre as quais, a `polaroidStore`, que trata os dados de importação.
+
+<div style="display: flex;flex-flow: column; gap: 5px">
+  <img style="width: 100%" src="./src/assets/images/docs/polaroid_store_code_block.png">
+
+  > Zustand store responsável pelos arquivos importados.
+
+  <img style="width: 100%" src="./src/assets/images/docs/polaroid_store_code_hook.png">
+
+  > Importação do custom hook no componente Dropzone.
+</div>
+
+Assim, utilizando uma *Handler Function*, os arquivos importados, salvos no array `acceptedFiles` são salvos "globalmente", ao utilizar o método `addPolarids`:
+
+<div style="display: flex;flex-flow: column; gap: 5px">
+  <img style="width: 100%" src="./src/assets/images/docs/polaroid_store_code_handler.png">
+
+  > Utilização do método `addPolaroids`, através da função, handleUploads.
+</div>
+
+Isso faz com que o anterior array de `Files`(`acceptedFiles`), retornado pelo hook `useDropzone`, seja mapeado como um novo array do tipo `PolaroidObject`, apresentado no bloco de código da `polaroidStore` agora com novas informações.
