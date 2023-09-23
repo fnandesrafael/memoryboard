@@ -211,4 +211,7 @@ Lorem Ipsum
 
 ## Créditos e Direitos Autorais
 
-Lorem Ipsum
+Todos os códigos desse projeto foram por mim desenvolvidos, os quais possuo direito de propriedade intelectual. No entanto, alguns assets como: fontes, imagens, texturas e bibliotecas, foram utilizados de terceiros, e a estes pertencem.
+Sendo esse apenas um projeto de cunho educacional, sem fins lucrativos, apenas tendo o fim o aperfeiçoamento do meu currículo e das minhas habilidades práticas de desenvolvimento frontend.
+
+© Rafael Fernandes de Lima - All rights reserved.
