@@ -65,7 +65,13 @@ Ele pode fazê-lo de duas maneiras, arrastando as imagens para o menu de importa
 
 <div style="display: flex;flex-flow: column; gap: 5px">
   <img src="./src/assets/images/docs/dropzone_pov_action.png" alt="Dropzone Preview Importer Action">
+
+  > Preview do Botão Responsável Pela Operação de Importação.
+
   <img src="./src/assets/images/docs/dropzone_pov_modal.png" alt="Dropzone Preview Importer Modal">
+
+  > Preview do Modal de Importação.
 </div>
 
+#####
 Isso tudo é possível graças a biblioteca **[React Dropzone](https://react-dropzone.js.org/)**, que facilita a implementação do `<input />` responsável por realizar o upload dos arquivos.
